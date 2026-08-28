@@ -2,7 +2,7 @@
 const { useState, useEffect, useCallback, useMemo } = React;
 
 // ========== DATA ==========
-const DATA = window.PLAN_V5 || {};
+const DATA = window.PLAN_V6 || {};
 
 // ========== DOSAGE PARAMETRIC SYSTEM ==========
 // Build lookup from data.dosage_parametric
@@ -127,10 +127,12 @@ function gifPath(demoGif) {
   return `assets/anim-gifs/${fname}`;
 }
 
-function stretchGif(poseId) {
+function stretchSvgPath(poseId) {
   const s = STRETCH_LIB[poseId];
-  if (!s) return null;
-  return gifPath(s.demo_gif);
+  if (!s || !s.demo_svg) return null;
+  // stretch_svgs/xxx.svg -> assets/stretch-svgs/xxx.svg
+  const fname = s.demo_svg.split('/').pop();
+  return `assets/stretch-svgs/${fname}`;
 }
 
 function splitPoints(text) {
@@ -208,7 +210,6 @@ const PRINCIPLE_ICKS = [I.Warm, I.Tempo, I.Breath, I.Note, I.Recover, I.Joint];
 function App() {
   const [activeDay, setActiveDay] = useState(0);
   const [selectedEx, setSelectedEx] = useState(null);
-  const [dayIdx, setDayIdx] = useState(0);
   const [modalClosing, setModalClosing] = useState(false);
   const [goalId, setGoalId] = useState(GOALS[0]?.id || "hypertrophy");
   const [expId, setExpId] = useState("intermediate_3_12m");
@@ -281,7 +282,7 @@ function Hero() {
     <div className="hero">
       <span className="hero-tag">
         <span className="dot"></span>
-        5 天动作库 · 固定器械 · v5
+        5 天动作库 · 固定器械
       </span>
       <h1>{DATA.plan_title || "周一至周五 训练动作库"}</h1>
       <p className="hero-sub">
@@ -329,10 +330,10 @@ function DosageBar({ goalId, expId, setGoal, setExp }) {
         </div>
       </div>
       <div className="ds-explain">
-        <strong>剂量联动：</strong>
+        <strong>负荷联动：</strong>
         当前为「{currentGoal?.name}」+「{currentExp?.name}」，
-        所有动作按动作分类（复合推/拉/腿/肩推 vs 孤立胸/肩/臂/腿/核心）实时计算组数、次数、RPE 与组间休息。
-        替换器械后动作分类不变，剂量自动同步。
+        所有动作按动作分类实时计算组数、次数、RPE 与组间休息。
+        替换器械后动作分类不变，负荷自动同步。
       </div>
     </div>
   );
@@ -478,8 +479,13 @@ function ExerciseCard({ exercise, num, goalId, expId, onClick }) {
                     <span className="pose-num">{i + 1}</span>
                     {s.name}
                     {s.demo_gif && (
-                      <span className={`mini-gif-tag ${s.demo_gif_match === "exact" ? "exact" : "close"}`}>
+                      <span className={`mini-gif-tag ${s.demo_gif_match === "exact" ? "exact" : "close"}`} title={s.demo_gif_match === "exact" ? "精确GIF" : "近似GIF"}>
                         <I.Play size={7} />
+                      </span>
+                    )}
+                    {s.demo_svg && !s.demo_gif && (
+                      <span className="mini-svg-tag" title="手绘示意">
+                        ✎
                       </span>
                     )}
                   </span>
@@ -605,26 +611,31 @@ function ExerciseModalBody({ exercise, goalId, expId }) {
   let currentStop = exercise.stop;
   let currentGif = exercise.demo_gif;
   let currentGifMatch = exercise.demo_gif_match;
-  let currentGifId = exercise.demo_gif_id;
+  let currentPhases = exercise.phases;
+  let currentBenefit = exercise.benefit;
+  let currentSubName = null;
   const movementClass = exercise.movement_class;
 
   if (subIdx >= 0 && subs[subIdx]) {
     const s = subs[subIdx];
     currentEqId = s.id;
-    currentCue = s.cue;
+    currentCue = s.feel_cue || s.cue;
     currentKeyPoints = s.key_points;
     currentStop = s.stop;
     currentGif = s.demo_gif;
     currentGifMatch = s.demo_gif_match;
-    currentGifId = s.demo_gif_id;
+    currentPhases = s.phases || exercise.phases;
+    currentSubName = s.name;
   }
 
-  const equipImg = eqImgPath(currentEqId);
+  // For substitutes that use the same machine (different direction), fall back to main equipment info
+  const actualEqId = (EQUIP_MAP[currentEqId]) ? currentEqId : (subIdx >= 0 ? exercise.primary_equipment_id : currentEqId);
+  const equipImg = eqImgPath(actualEqId);
   const gifSrc = gifPath(currentGif);
-  const eqName = EQUIP_MAP[currentEqId]?.name || currentEqId;
-  const eqInfo = EQUIP_MAP[currentEqId];
+  const eqName = EQUIP_MAP[actualEqId]?.name || (subIdx >= 0 && subs[subIdx]?.name) || currentEqId;
+  const eqInfo = EQUIP_MAP[actualEqId];
   const keyPointsArr = splitPoints(currentKeyPoints);
-  const phases = exercise.phases;
+  const phases = currentPhases;
 
   // Compute dosage (linked to global selectors)
   const dosage = useMemo(() => {
@@ -726,9 +737,9 @@ function ExerciseModalBody({ exercise, goalId, expId }) {
 
       <div className="modal-body">
         {/* Benefit */}
-        {exercise.benefit && (
+        {currentBenefit && (
           <div className="benefit-box">
-            <strong>目标效益：</strong>{exercise.benefit}
+            <strong>目标效益：</strong>{currentBenefit}
           </div>
         )}
 
@@ -763,7 +774,7 @@ function ExerciseModalBody({ exercise, goalId, expId }) {
 
         {movementClass && !dosage?.isStatic && (
           <div className="mc-note">
-            剂量按「{MOVEMENT_CLASS_NAMES[movementClass] || movementClass}」分类查表，随顶部目标与经验联动。
+            负荷按「{MOVEMENT_CLASS_NAMES[movementClass] || movementClass}」分类查表，随顶部目标与经验联动。
           </div>
         )}
 
@@ -795,7 +806,7 @@ function ExerciseModalBody({ exercise, goalId, expId }) {
         {keyPointsArr.length > 0 && (
           <>
             <h3 className="section-title">
-              {subIdx >= 0 ? "替代器械动作要领" : "动作要领"}
+              {subIdx >= 0 ? `替代器械 · ${currentSubName || ""}动作要领` : "动作要领"}
             </h3>
             <ul className="points-list">
               {keyPointsArr.map((p, i) => (
@@ -837,6 +848,8 @@ function ExerciseModalBody({ exercise, goalId, expId }) {
 // ===== Stretch Modal Body =====
 function StretchModalBody({ exercise }) {
   const poses = exercise.poses || [];
+  const hasAnyGif = poses.some(p => STRETCH_LIB[p]?.demo_gif);
+  const hasAnySvg = poses.some(p => STRETCH_LIB[p]?.demo_svg);
   return (
     <>
       <div className="benefit-box" style={{ margin: "12px 20px 0" }}>
@@ -845,19 +858,30 @@ function StretchModalBody({ exercise }) {
       <div className="stretch-logic">
         <strong>动作顺序：</strong>{exercise.pose_logic}
       </div>
-      <div className="stretch-poses-full noimg">
+      <div className="stretch-poses-full">
         {poses.map((poseId, i) => {
           const s = STRETCH_LIB[poseId];
           if (!s) return null;
           const gif = gifPath(s.demo_gif);
+          const svg = stretchSvgPath(poseId);
           const match = s.demo_gif_match;
+          const hasVisual = gif || svg;
           return (
-            <div className="stretch-pose-card noimg" key={poseId}>
+            <div className={`stretch-pose-card ${hasVisual ? "" : "noimg"}`} key={poseId}>
               <span className="pose-order">{i + 1}</span>
-              {gif && (
-                <div className="pose-gif-wrap">
-                  <img src={gif} alt={s.name} className="pose-gif"
-                       onError={(e) => { e.target.style.display = "none"; }}/>
+              {hasVisual && (
+                <div className={`pose-visual-wrap ${svg ? "svg-wrap" : "gif-wrap"}`}>
+                  {gif && (
+                    <img src={gif} alt={s.name} className="pose-visual"
+                         onError={(e) => { e.target.style.display = "none"; }}/>
+                  )}
+                  {svg && !gif && (
+                    <img src={svg} alt={s.name} className="pose-visual pose-svg"
+                         onError={(e) => { e.target.style.display = "none"; }}/>
+                  )}
+                  {svg && !gif && (
+                    <span className="pose-visual-label">姿势示意</span>
+                  )}
                 </div>
               )}
               <div className="pose-body">
@@ -867,7 +891,12 @@ function StretchModalBody({ exercise }) {
                   {gif && (
                     <span className={`gif-match-mini ${match === "exact" ? "exact" : "close"}`}>
                       <I.Play size={8} />
-                      {match === "exact" ? "精确" : "近似"}
+                      {match === "exact" ? "精确 GIF" : "近似 GIF"}
+                    </span>
+                  )}
+                  {svg && !gif && (
+                    <span className="svg-match-mini">
+                      手绘示意
                     </span>
                   )}
                 </div>
@@ -879,10 +908,19 @@ function StretchModalBody({ exercise }) {
           );
         })}
       </div>
-      <div className="gif-source-note stretch-src">
-        <I.Info size={10} />
-        拉伸示范 GIF 来源：fitness.xingshuwen.com · 数据集 © Gym Visual / gymvisual.com
-      </div>
+      {hasAnyGif && (
+        <div className="gif-source-note stretch-src">
+          <I.Info size={10} />
+          动作示范 GIF 来源：fitness.xingshuwen.com · 数据集 © Gym Visual / gymvisual.com
+          {hasAnySvg && "；姿势示意图为本页自绘（非照片级示范）"}
+        </div>
+      )}
+      {!hasAnyGif && hasAnySvg && (
+        <div className="gif-source-note stretch-src">
+          <I.Info size={10} />
+          姿势示意图为本页自绘（非照片级示范），具体动作以文字要领为准。
+        </div>
+      )}
       <div style={{ padding: "12px 20px 20px" }}>
         <h3 className="section-title">提示</h3>
         <p style={{ fontSize: "12px", color: "var(--ink-3)", margin: 0, lineHeight: 1.7 }}>
@@ -924,7 +962,7 @@ function DosageFramework({ goalId, expId }) {
   return (
     <div className="dosage-section">
       <div className="dosage-head">
-        <h3>剂量框架 · 查表说明</h3>
+        <h3>负荷框架 · 查表说明</h3>
         <p>
           当前为 <strong style={{color: "var(--accent-deep)"}}>「{goal?.name}」×「{exp?.name}」</strong> 组合。
           所有动作按 movement_class（复合推/拉/腿/肩推 vs 孤立胸/肩/臂/腿/核心）查表后，
@@ -1037,9 +1075,9 @@ function RiskAndSourceSection() {
     {
       claim: "计划本身为通用起点方案，未读取任何用户身体数据",
       status: "假设",
-      risk: "用户未提供身高/体重/伤病/经验/打卡数据；剂量与组次仅给区间，需个人调整",
+      risk: "用户未提供身高/体重/伤病/经验/打卡数据；负荷与组次仅给区间，需个人调整",
       confidence: "高",
-      verify: "本页训练计划为通用版本，落地需按个人恢复状态微调",
+      verify: "本页训练计划为通用起点方案，落地需按个人恢复状态微调",
     },
     {
       claim: "五人站系列动作（绳索夹胸/下压/弯举/站姿推举/单臂侧平举/面拉）通过 cable 系列动作示范映射",
