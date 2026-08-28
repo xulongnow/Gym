@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <rect x="2" y="2" width="176" height="176" rx="12" fill="#f6f3ec"/>
+  <!-- door frame edge -->
+  <line x1="62" y1="14" x2="62" y2="164" stroke="#c9c2b2" stroke-width="8" stroke-linecap="round"/>
+  <!-- ground -->
+  <line x1="30" y1="150" x2="152" y2="150" stroke="#d8d2c4" stroke-width="3" stroke-linecap="round"/>
+  <!-- torso stepping through (facing left) -->
+  <line x1="98" y1="49" x2="94" y2="100" stroke="#1a2236" stroke-width="6" stroke-linecap="round"/>
+  <!-- head -->
+  <circle cx="99" cy="38" r="9" fill="#1a2236"/>
+  <!-- arm bent 90 deg, forearm vertical on frame -->
+  <line x1="94" y1="56" x2="72" y2="56" stroke="#1a2236" stroke-width="5" stroke-linecap="round"/>
+  <line x1="72" y1="56" x2="72" y2="24" stroke="#1a2236" stroke-width="5" stroke-linecap="round"/>
+  <line x1="72" y1="24" x2="72" y2="24" stroke="#1a2236" stroke-width="5"/>
+  <!-- chest highlight (front of shoulder) -->
+  <line x1="91" y1="52" x2="86" y2="62" stroke="#c76143" stroke-width="6" stroke-linecap="round"/>
+  <!-- front leg stepping through doorway -->
+  <polyline points="94,100 76,120 58,148" fill="none" stroke="#1a2236" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- back leg -->
+  <polyline points="94,100 112,126 116,148" fill="none" stroke="#1a2236" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- body-forward arrow -->
+  <line x1="126" y1="58" x2="106" y2="58" stroke="#c76143" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="5 4"/>
+  <polygon points="108,54 108,62 100,58" fill="#c76143"/>
+</svg>

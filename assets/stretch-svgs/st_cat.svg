@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <rect x="2" y="2" width="176" height="176" rx="12" fill="#f6f3ec"/>
+  <!-- ground -->
+  <line x1="30" y1="132" x2="150" y2="132" stroke="#d8d2c4" stroke-width="3" stroke-linecap="round"/>
+  <!-- arched spine: shoulder to hip -->
+  <path d="M 116 82 Q 88 54 62 82" fill="none" stroke="#1a2236" stroke-width="6" stroke-linecap="round"/>
+  <!-- neck + head (looking down) -->
+  <line x1="116" y1="82" x2="126" y2="74" stroke="#1a2236" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="131" cy="70" r="9" fill="#1a2236"/>
+  <!-- front leg vertical -->
+  <line x1="114" y1="84" x2="114" y2="128" stroke="#1a2236" stroke-width="5" stroke-linecap="round"/>
+  <!-- hind leg: knee below hip, shin back -->
+  <polyline points="64,84 60,112 46,130" fill="none" stroke="#1a2236" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- spine highlight (arch) -->
+  <path d="M 110 72 Q 88 46 68 72" fill="none" stroke="#c76143" stroke-width="6" stroke-linecap="round"/>
+  <!-- arch-up motion arrow -->
+  <path d="M 78 40 Q 88 30 98 40" fill="none" stroke="#c76143" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="5 4"/>
+  <polygon points="94,36 102,42 92,46" fill="#c76143"/>
+</svg>
