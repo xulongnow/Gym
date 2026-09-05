@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220">
+  <rect x="6" y="6" width="208" height="208" rx="18" fill="#f6f3ec"/>
+  <g fill="none" stroke="#3a4256" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="22" y1="106" x2="198" y2="106" stroke="#c76143" stroke-width="8"/>
+    <rect x="40" y="88" width="14" height="36" rx="4" fill="#3a4256"/>
+    <rect x="56" y="93" width="12" height="26" rx="4" fill="#e7d9c8"/>
+    <rect x="70" y="97" width="10" height="18" rx="3" fill="#3a4256"/>
+    <rect x="140" y="97" width="10" height="18" rx="3" fill="#3a4256"/>
+    <rect x="152" y="93" width="12" height="26" rx="4" fill="#e7d9c8"/>
+    <rect x="166" y="88" width="14" height="36" rx="4" fill="#3a4256"/>
+  </g>
+  <text x="110" y="166" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="17" fill="#3a4256" font-weight="600">杠铃</text>
+  <text x="110" y="188" text-anchor="middle" font-family="PingFang SC,sans-serif" font-size="11.5" fill="#8a8275">自由重量 · Barbell</text>
+</svg>
