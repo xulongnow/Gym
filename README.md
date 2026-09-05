@@ -35,7 +35,7 @@
 
 ## 部署
 
-本仓库通过 **Cloudflare Workers** 部署静态资源（国内访问加速），配置见 `wrangler.jsonc`（Worker 名 `lydz`，以仓库根目录为静态资源目录）。**请勿删除 `wrangler.jsonc`**，否则部署将失去配置源。
+本仓库通过 **Cloudflare Workers** 部署静态资源（国内访问加速），配置见 `wrangler.jsonc`（Worker 名 `gym`，以仓库根目录为静态资源目录）。**请勿删除 `wrangler.jsonc`**，否则部署将失去配置源。
 
 ## 说明
 
