@@ -1,0 +1,16 @@
+{
+  "name": "五分化训练动作库",
+  "short_name": "训练动作库",
+  "description": "面向初学者的健身房 5 天动作库，以固定器械为主",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f6f3ec",
+  "theme_color": "#c76143",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
