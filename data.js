@@ -798,7 +798,7 @@ window.PLAN_V6 = {
             "return": "肩胛始终保持下沉不耸肩；推出沿下斜轨迹走，不顶腰不后仰"
           },
           "common_errors": "座椅过高导致把手对上胸或肩前侧 → 调座椅使把手对准胸下沿\n推起时耸肩探肩 → 肩胛下沉后收，肩不参与发力\n腰部脱离靠垫借力 → 下背始终贴实靠垫\n肘关节锁死 → 手臂接近伸直即停，保留微屈\n速度过快、惯性发力 → 推出 2 秒、放回 2-3 秒，全程控制",
-          "demo_gif": "anim-gifs/placeholder_triceps_pushdown.gif",
+          "demo_gif": "anim-gifs/decline_press.gif",
           "demo_gif_id": "decline_press",
           "demo_gif_match": "exact"
         },
@@ -1843,7 +1843,7 @@ window.PLAN_V6 = {
             "return": "回到正中不卸力，立即向另一侧旋转或完成规定次数后换侧；全程骨盆稳定不随躯干转动"
           },
           "common_errors": "用手臂拉把手带动旋转 → 手臂仅辅助固定，旋转由腹外斜肌发起\n骨盆随躯干一起转动 → 骨盆始终正对前方，只有胸椎段旋转\n旋转幅度过大导致腰椎参与 → 幅度由器械限定，不强行加大幅度\n靠垫借力后推 → 背部轻触靠垫即可，不主动后顶\n憋气 → 保持呼吸节律，发力时呼气、回位时吸气",
-          "demo_gif": "anim-gifs/placeholder_shoulder_stretch.gif",
+          "demo_gif": "anim-gifs/rotary_crunch.gif",
           "demo_gif_id": "rotary_crunch",
           "demo_gif_match": "exact"
         },
