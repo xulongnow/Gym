@@ -268,6 +268,15 @@ window.PLAN_V6 = {
       "demo_movement_id": "demo_rotary_torso",
       "demo_note": "坐正背部轻靠垫，腹外斜肌发力向一侧旋转，骨盆不动",
       "image": "equipment-hd/rotary_torso.jpg"
+    },
+    {
+      "id": "assisted_dip",
+      "name": "辅助双杠臂屈伸机",
+      "category": "力量",
+      "appearance": "带有跪姿或站姿辅助垫的双杠臂屈伸器械，可调整配重提供向上助力",
+      "demo_movement_id": "assisted_dip",
+      "demo_note": "跪在辅助垫上（或站在踏板上），双手握双杠；调整辅助重量使能完成目标次数；屈髋挺胸、重心前倾",
+      "image": "equipment-hd/assisted_dip.jpg"
     }
   ],
   "stretch_library": {
@@ -286,7 +295,7 @@ window.PLAN_V6 = {
       "feel_cue": "腋下到腰侧的背阔肌被拉长",
       "key_points": "面对墙站立，双手扶墙比肩稍宽、高度约与胸平；双脚向后退、臀部向后推，让上身下沉、背部拉长；膝保持微屈不锁死；换侧时重心移向另一只手",
       "stop": "肩周刺痛→停止",
-      "demo_gif": "anim_gifs/1346.gif",
+      "demo_gif": "anim-gifs/1346.gif",
       "demo_gif_id": "1346",
       "demo_gif_match": "exact"
     },
@@ -323,7 +332,7 @@ window.PLAN_V6 = {
       "feel_cue": "肱三头肌长头（腋后到肘后）有牵拉感",
       "key_points": "右臂举过头顶后屈肘，让右手沿后背下滑；上臂贴耳、肘尖指向天花板；左手握住右肘向左后方轻拉；腰立直不弓背；换侧同法",
       "stop": "肩痛→停",
-      "demo_gif": "anim_gifs/0643.gif",
+      "demo_gif": "anim-gifs/0643.gif",
       "demo_gif_id": "0643",
       "demo_gif_match": "exact"
     },
@@ -333,7 +342,7 @@ window.PLAN_V6 = {
       "feel_cue": "肩后侧与肩外侧有牵拉感",
       "key_points": "右臂横过胸前；左手扣住右肘外侧（不是压在肩上），把右臂向胸口方向轻拉；右肩保持下沉不耸、身体不扭转；换侧同法",
       "stop": "肩痛→停",
-      "demo_gif": "anim_gifs/0669.gif",
+      "demo_gif": "anim-gifs/0669.gif",
       "demo_gif_id": "0669",
       "demo_gif_match": "exact"
     },
@@ -343,7 +352,7 @@ window.PLAN_V6 = {
       "feel_cue": "大腿后侧从臀到膝有清晰牵拉感",
       "key_points": "坐姿，左腿伸直、脚尖回勾，右脚掌贴住左大腿内侧；上身从髋部折叠缓慢前压，双手沿腿向脚方向伸；背保持挺直不弓；用胸口找膝盖，不是头找脚；换侧同法",
       "stop": "膝后刺痛→停",
-      "demo_gif": "anim_gifs/1511.gif",
+      "demo_gif": "anim-gifs/1511.gif",
       "demo_gif_id": "1511",
       "demo_gif_match": "exact"
     },
@@ -353,7 +362,7 @@ window.PLAN_V6 = {
       "feel_cue": "小腿后侧下部有牵拉感",
       "key_points": "双手扶墙，身体与墙约一步距离；前腿屈膝、后腿伸直，后脚跟踩实地面、脚尖朝正前；身体向墙缓慢前压、重心压向后腿；后膝保持伸直；换侧换腿",
       "stop": "跟腱痛→停",
-      "demo_gif": "anim_gifs/1377.gif",
+      "demo_gif": "anim-gifs/1377.gif",
       "demo_gif_id": "1377",
       "demo_gif_match": "exact"
     }
@@ -389,7 +398,7 @@ window.PLAN_V6 = {
             "eccentric": "控制约 2 秒缓慢放回，弹力带始终保持张力",
             "return": "回到体前不卸力，立即接下一次，躯干与脊柱保持不动"
           },
-          "demo_gif": "anim_gifs/1017-aHDy5O5.gif",
+          "demo_gif": "anim-gifs/1017-aHDy5O5.gif",
           "demo_gif_id": "1017",
           "demo_gif_match": "exact",
           "substitutes": [
@@ -398,7 +407,7 @@ window.PLAN_V6 = {
               "name": "肩胛骨俯卧撑（前锯肌激活）",
               "key_points": "手肘全程保持伸直，只让肩胛做“含胸—撑开”；力量不足可跪姿或手扶墙降阶；躯干不塌、不左右晃",
               "stop": "手腕或肩前侧疼痛 → 改扶墙姿势或停",
-              "demo_gif": "anim_gifs/3021-jV65tKx.gif",
+              "demo_gif": "anim-gifs/3021-jV65tKx.gif",
               "demo_gif_id": "3021",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -424,7 +433,7 @@ window.PLAN_V6 = {
               "primary_equipment_id": "treadmill",
               "key_points": "速度 5-6 km/h、正常步幅、不扶把手；走到微热、能正常说话即可",
               "stop": "胸闷、头晕 → 立即停止",
-              "demo_gif": "anim_gifs/3666.gif",
+              "demo_gif": "anim-gifs/3666.gif",
               "demo_gif_id": "3666",
               "demo_gif_match": "exact",
               "phases": {
@@ -457,7 +466,7 @@ window.PLAN_V6 = {
               "name": "阔角度推胸（上斜）",
               "key_points": "靠背调上斜 30-45°，调座椅让把手对准锁骨下方；背与上背完全贴靠垫、肩胛下沉后收；推出 2 秒、放回 2-3 秒，顶端不锁肘、不耸肩",
               "stop": "肩前侧刺痛 → 降档并缩小角度；锁骨下端紧张 → 检查靠背角度是否过陡。禁忌：肩峰撞击综合征急性期、肩袖损伤、胸壁术后恢复期应谨慎。",
-              "demo_gif": "anim_gifs/1299.gif",
+              "demo_gif": "anim-gifs/1299.gif",
               "demo_gif_id": "1299",
               "demo_gif_match": "exact",
               "phases": {
@@ -475,7 +484,7 @@ window.PLAN_V6 = {
               "name": "塔式推胸",
               "key_points": "坐正背贴实，调座椅让把手与胸中段齐平；双臂从两侧向胸前弧线汇聚推；顶峰停 1 秒；肘微屈不锁死",
               "stop": "肘内侧痛 → 降档并检查肘是否过伸；胸骨不适 → 检查座椅高度与推的路线。禁忌：肩袖损伤急性期、胸壁术后恢复期应谨慎。",
-              "demo_gif": "anim_gifs/1301.gif",
+              "demo_gif": "anim-gifs/1301.gif",
               "demo_gif_id": "1301",
               "demo_gif_match": "exact",
               "phases": {
@@ -493,7 +502,7 @@ window.PLAN_V6 = {
               "name": "杠铃平板卧推",
               "key_points": "躺平后肩胛后缩下沉、双脚用力踩实；握距让小臂在底部垂直地面，肘与身体约 45-75°；杠铃下落到胸下沿，推起时不锁死肘关节；臀部始终贴凳、不抬臀",
               "stop": "肩前侧刺痛 → 缩窄握距、检查肩胛是否下沉；手腕疼痛 → 确保手腕中立不塌腕；胸肌拉伤感 → 立即终止当日训练。禁忌：肩峰撞击综合征急性期、胸壁手术后恢复期应谨慎或避免；卧推时务必有保护架或spotter。接近力竭时如无法完成最后一次，应借助保护架或将杠铃落至胸口后向一侧倾倒（需提前熟悉安全脱杠技巧），切勿强行挣扎导致杠铃失控砸落。",
-              "demo_gif": "anim_gifs/0025.gif",
+              "demo_gif": "anim-gifs/0025.gif",
               "demo_gif_id": "0025",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -514,7 +523,7 @@ window.PLAN_V6 = {
               "name": "哑铃平板卧推",
               "key_points": "肩胛后缩下沉、脚踩实；掌心朝前持哑铃于胸两侧，底部小臂垂直；下放肘约 45-75°，推起时两铃向中间靠拢但不相撞；哑铃行程更长，底部充分拉伸胸肌",
               "stop": "肩前侧刺痛 → 缩窄下放角度、检查肩胛稳定；哑铃失控 → 选择可控重量，必要时使用保护架。禁忌：肩峰撞击综合征、肩袖损伤应谨慎；无保护架时避免力竭组。",
-              "demo_gif": "anim_gifs/0289.gif",
+              "demo_gif": "anim-gifs/0289.gif",
               "demo_gif_id": "0289",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -540,7 +549,7 @@ window.PLAN_V6 = {
             "eccentric": "回放（离心/肌肉拉长阶段）: 吸气，控制 2–3 秒匀速把把手放回胸前起始位，全程保持胸肌张力，不彻底放松。大臂回到身体两侧平行位置即可，不要让配重片砸落。",
             "return": "回到起始位即完成一次；肩胛始终保持下沉后收，不耸肩"
           },
-          "demo_gif": "anim_gifs/0577.gif",
+          "demo_gif": "anim-gifs/0577.gif",
           "demo_gif_id": "0577",
           "demo_gif_match": "exact"
         },
@@ -558,7 +567,7 @@ window.PLAN_V6 = {
               "name": "坐式推胸（平板）",
               "key_points": "座椅调到把手对准胸中段；背与上背完全贴靠垫、肩胛下沉；推出 2 秒、放回 2-3 秒，顶端不锁肘",
               "stop": "肩前侧刺痛 → 降档并检查座椅高度与肩胛位置；肘关节不适 → 避免锁死肘关节。禁忌：肩袖损伤急性期、肩峰撞击综合征、胸壁术后恢复期应谨慎或避免。",
-              "demo_gif": "anim_gifs/0577.gif",
+              "demo_gif": "anim-gifs/0577.gif",
               "demo_gif_id": "0577",
               "demo_gif_match": "exact",
               "phases": {
@@ -576,7 +585,7 @@ window.PLAN_V6 = {
               "name": "塔式推胸（调低角度）",
               "key_points": "塔式推胸座椅调低，让把手高度对准锁骨下方；坐正背贴实，肩胛下沉；双臂向锁骨前方汇聚推，顶峰停 1 秒",
               "stop": "肘内侧痛 → 降档",
-              "demo_gif": "anim_gifs/1301.gif",
+              "demo_gif": "anim-gifs/1301.gif",
               "demo_gif_id": "1301",
               "demo_gif_match": "close",
               "phases": {
@@ -593,7 +602,7 @@ window.PLAN_V6 = {
               "name": "哑铃上斜卧推",
               "key_points": "凳面调到上斜 30°以内（过陡会变成练肩）；肩胛后缩下沉贴垫；哑铃下放到锁骨两侧、肘 45-75°；上胸发力向上推，不锁肘",
               "stop": "肘内侧痛 → 降档并检查肘是否过伸；胸骨不适 → 检查座椅高度与推的路线。禁忌：肩袖损伤急性期、胸壁术后恢复期应谨慎。",
-              "demo_gif": "anim_gifs/0314.gif",
+              "demo_gif": "anim-gifs/0314.gif",
               "demo_gif_id": "0314",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -619,7 +628,7 @@ window.PLAN_V6 = {
             "eccentric": "吸气，控制 2-3 秒把手回到胸前",
             "return": "肩胛始终下沉不耸肩；不上借力"
           },
-          "demo_gif": "anim_gifs/1299.gif",
+          "demo_gif": "anim-gifs/1299.gif",
           "demo_gif_id": "1299",
           "demo_gif_match": "exact"
         },
@@ -637,7 +646,7 @@ window.PLAN_V6 = {
               "name": "五人站绳索夹胸",
               "key_points": "五人站两侧高位滑轮各挂把手；身体前倾约 15°、一只脚在前站稳；肘微屈固定，双臂弧线合拢至胸前停 1 秒",
               "stop": "肩前刺痛 → 降重",
-              "demo_gif": "anim_gifs/0155.gif",
+              "demo_gif": "anim-gifs/0155.gif",
               "demo_gif_id": "0155",
               "demo_gif_match": "exact",
               "phases": {
@@ -654,7 +663,7 @@ window.PLAN_V6 = {
               "name": "坐式推胸（被占用时）",
               "key_points": "动作与坐姿推胸一致；作为夹胸替代时顶峰停 1 秒、离心放慢，弥补中缝刺激",
               "stop": "肩部不适 → 降档",
-              "demo_gif": "anim_gifs/0577.gif",
+              "demo_gif": "anim-gifs/0577.gif",
               "demo_gif_id": "0577",
               "demo_gif_match": "exact",
               "phases": {
@@ -671,7 +680,7 @@ window.PLAN_V6 = {
               "name": "哑铃飞鸟",
               "key_points": "仰卧，肘关节保持微屈角度全程不变；想象用小臂和肘环抱一棵大树，靠胸把哑铃沿弧线向中间抱；到顶两铃不相撞、胸中缝顶峰收缩 1 秒；回放充分拉伸胸肌",
               "stop": "肩前侧刺痛 → 缩小下放幅度、降重；胸肌拉伤感 → 立即停止。禁忌：肩峰撞击综合征、肩袖损伤、肩关节不稳定/脱位史应极其谨慎或避免。",
-              "demo_gif": "anim_gifs/0308.gif",
+              "demo_gif": "anim-gifs/0308.gif",
               "demo_gif_id": "0308",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -692,7 +701,7 @@ window.PLAN_V6 = {
               "name": "俯卧撑",
               "key_points": "双手略宽于肩、手指朝前，肘与身体约 45°不张成 T 字；收紧核心与臀，头肩髋踝一条直线；下降到胸接近地面再推起；力量不足可跪姿或手扶台阶做上斜俯卧撑",
               "stop": "手腕痛 → 可改用拳头撑或俯卧撑支架；肩前不适 → 检查手位和肘角度。禁忌：肩峰撞击综合征、腕管综合征急性期可用支架或退阶至跪姿俯卧撑。",
-              "demo_gif": "anim_gifs/0662.gif",
+              "demo_gif": "anim-gifs/0662.gif",
               "demo_gif_id": "0662",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -718,7 +727,7 @@ window.PLAN_V6 = {
             "eccentric": "吸气，控制 2-3 秒把双臂沿原弧线放回",
             "return": "肘保持微屈，不锁不伸直；不用手臂伸直发力，靠胸收拢"
           },
-          "demo_gif": "anim_gifs/0596.gif",
+          "demo_gif": "anim-gifs/0596.gif",
           "demo_gif_id": "0596",
           "demo_gif_match": "exact"
         },
@@ -789,9 +798,9 @@ window.PLAN_V6 = {
             "return": "肩胛始终保持下沉不耸肩；推出沿下斜轨迹走，不顶腰不后仰"
           },
           "common_errors": "座椅过高导致把手对上胸或肩前侧 → 调座椅使把手对准胸下沿\n推起时耸肩探肩 → 肩胛下沉后收，肩不参与发力\n腰部脱离靠垫借力 → 下背始终贴实靠垫\n肘关节锁死 → 手臂接近伸直即停，保留微屈\n速度过快、惯性发力 → 推出 2 秒、放回 2-3 秒，全程控制",
-          "demo_gif": "anim_gifs/placeholder_triceps_pushdown.gif",
-          "demo_gif_id": "placeholder_triceps_pushdown",
-          "demo_gif_match": "sketch"
+          "demo_gif": "anim-gifs/placeholder_triceps_pushdown.gif",
+          "demo_gif_id": "decline_press",
+          "demo_gif_match": "exact"
         },
         {
           "name": "三头下压",
@@ -807,7 +816,7 @@ window.PLAN_V6 = {
               "name": "五人站绳索下压",
               "key_points": "五人站高位滑轮接直杆；面对滑轮站立，大臂贴身两侧、肘弯约 90°，上身微前倾；仅肘伸屈把杆压至大腿前",
               "stop": "肘痛 → 降重",
-              "demo_gif": "anim_gifs/0201.gif",
+              "demo_gif": "anim-gifs/0201.gif",
               "demo_gif_id": "0201",
               "demo_gif_match": "exact",
               "phases": {
@@ -824,7 +833,7 @@ window.PLAN_V6 = {
               "name": "仰卧杠铃臂屈伸（碎颅者）",
               "key_points": "平躺、大臂垂直地面并固定；窄握杠铃，只屈肘把杠铃缓慢放到额头上方再用三头伸回；下放时大臂不后移、肘不外展；顶端不必锁死，保持三头张力",
               "stop": "肘内侧痛 → 减重并缩短下放幅度；肩不适 → 检查大臂是否固定、下放是否过深。禁忌：肘关节炎症急性期、肩峰撞击综合征应谨慎。杠铃下放至额头/面部区域，重量失控可能导致面部受伤，务必使用可控重量，必要时请人保护。",
-              "demo_gif": "anim_gifs/0060.gif",
+              "demo_gif": "anim-gifs/0060.gif",
               "demo_gif_id": "0060",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -850,7 +859,7 @@ window.PLAN_V6 = {
             "eccentric": "吸气，控制 2-3 秒把杆放回肘弯 90° 起始位",
             "return": "大臂始终贴体不动，只有肘在动；不耸肩不后仰"
           },
-          "demo_gif": "anim_gifs/0201.gif",
+          "demo_gif": "anim-gifs/0201.gif",
           "demo_gif_id": "0201",
           "demo_gif_match": "exact"
         },
@@ -905,7 +914,7 @@ window.PLAN_V6 = {
             "eccentric": "呼气、靠肩胛与核心把轮拉回，躯干重心基本不动",
             "return": "回到肩在手腕正上方即停，不做控制不住的幅度"
           },
-          "demo_gif": "anim_gifs/0857.gif",
+          "demo_gif": "anim-gifs/0857.gif",
           "demo_gif_id": "0857",
           "demo_gif_match": "exact",
           "substitutes": [
@@ -914,7 +923,7 @@ window.PLAN_V6 = {
               "name": "肩胛骨俯卧撑（前锯肌激活）",
               "key_points": "手肘全程保持伸直，只让肩胛做“含胸—撑开”；力量不足可跪姿或手扶墙降阶；躯干不塌、不左右晃",
               "stop": "手腕或肩前侧疼痛 → 改扶墙姿势或停",
-              "demo_gif": "anim_gifs/3021-jV65tKx.gif",
+              "demo_gif": "anim-gifs/3021-jV65tKx.gif",
               "demo_gif_id": "3021",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -939,7 +948,7 @@ window.PLAN_V6 = {
               "name": "弹力带 Y 字平举（肩胛激活）",
               "key_points": "视频要点：只动肩、不动脊柱，别做成挺腰抬上身；手肘微屈，沿约30°的Y形上举；回程弹力带不松掉；幅度以肩不耸、腰不顶为限",
               "stop": "肩峰撞击痛、手麻，或必须靠挺腰才能抬起 → 减重或停",
-              "demo_gif": "anim_gifs/1017-aHDy5O5.gif",
+              "demo_gif": "anim-gifs/1017-aHDy5O5.gif",
               "demo_gif_id": "1017",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -965,7 +974,7 @@ window.PLAN_V6 = {
               "primary_equipment_id": "treadmill",
               "key_points": "速度 5-6 km/h、正常步幅、不扶把手；走到微热、能正常说话即可",
               "stop": "胸闷、头晕 → 立即停止",
-              "demo_gif": "anim_gifs/3666.gif",
+              "demo_gif": "anim-gifs/3666.gif",
               "demo_gif_id": "3666",
               "demo_gif_match": "exact",
               "phases": {
@@ -998,7 +1007,7 @@ window.PLAN_V6 = {
               "name": "剪刀拉背（窄握）",
               "key_points": "坐稳大腿固定在挡垫下；双手窄距握把（对握或反握）；挺胸沉肩，肘贴身前下拉至胸下沿；回放慢",
               "stop": "肩前侧痛 → 改宽握",
-              "demo_gif": "anim_gifs/0818.gif",
+              "demo_gif": "anim-gifs/0818.gif",
               "demo_gif_id": "0818",
               "demo_gif_match": "close",
               "phases": {
@@ -1015,7 +1024,7 @@ window.PLAN_V6 = {
               "name": "引体向上",
               "key_points": "双手略宽于肩正握单杠自然悬挂；先下沉肩胛、背阔预发力，再屈肘把身体上拉到下巴过杠；肘向下向后、身体仅微后仰；顶端肩胛夹紧，回放要慢、肘不锁死；拉不起可用弹力带辅助",
               "stop": "肩前不适 → 检查握法和沉肩；腰不适 → 核心收紧。禁忌：肩峰撞击综合征、肩袖损伤、腰椎间盘突出急性期应谨慎。",
-              "demo_gif": "anim_gifs/0652.gif",
+              "demo_gif": "anim-gifs/0652.gif",
               "demo_gif_id": "0652",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -1041,7 +1050,7 @@ window.PLAN_V6 = {
             "eccentric": "吸气，控制 2-3 秒把手回放到起始位（手臂不完全伸直）；往上放不要放到底",
             "return": "不后仰借力；微微前倾让核心发力（肋骨发力连接背阔肌），身体保持控制"
           },
-          "demo_gif": "anim_gifs/0579.gif",
+          "demo_gif": "anim-gifs/0579.gif",
           "demo_gif_id": "0579",
           "demo_gif_match": "exact"
         },
@@ -1059,7 +1068,7 @@ window.PLAN_V6 = {
               "name": "剪刀拉背（直臂下压）",
               "key_points": "站位于直臂下压位，双手对握把手、肘伸直微屈，上身前倾 15° 挺胸；背发力把把手沿大腿方向下压；肘角全程不变",
               "stop": "肩部刺痛 → 降重",
-              "demo_gif": "anim_gifs/0238.gif",
+              "demo_gif": "anim-gifs/0238.gif",
               "demo_gif_id": "0238",
               "demo_gif_match": "exact",
               "phases": {
@@ -1076,7 +1085,7 @@ window.PLAN_V6 = {
               "name": "臂下压背肌（直臂下压模式）",
               "key_points": "面对臂下压器械，双手正握直杆、肘伸直微屈；上身微前倾；背发力把直杆直臂下压至大腿前，肘角保持不变",
               "stop": "肩部不适 → 降重",
-              "demo_gif": "anim_gifs/0238.gif",
+              "demo_gif": "anim-gifs/0238.gif",
               "demo_gif_id": "0238",
               "demo_gif_match": "exact",
               "phases": {
@@ -1093,7 +1102,7 @@ window.PLAN_V6 = {
               "name": "杠铃俯身划船",
               "key_points": "屈髋俯身约 45°、腰背中立不弓不塌，膝微屈，杠铃自然垂于肩下；背预发力把杠铃沿大腿拉向下腹、肘贴身向后；肩胛后缩，不挺腰不后仰借力",
               "stop": "腰不适 → 检查是否圆背、是否俯身角度过大；圆背严重 → 减重或改为支撑划船。禁忌：腰椎间盘突出急性期、椎管狭窄应极其谨慎或避免。",
-              "demo_gif": "anim_gifs/0027.gif",
+              "demo_gif": "anim-gifs/0027.gif",
               "demo_gif_id": "0027",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -1114,7 +1123,7 @@ window.PLAN_V6 = {
               "name": "哑铃俯身划船（单臂）",
               "key_points": "单手扶凳、同侧膝跪凳，另一脚踩实，上身与地面平行、背平直；持铃手自然下垂，背发力把哑铃拉向髋侧（不是胸口）、肘贴身；两侧重量次数一致",
               "stop": "腰不适 → 检查是否圆背、核心是否收紧；肩不适 → 检查拉的方向和肩胛位置。禁忌：腰椎间盘突出急性期应极其谨慎。",
-              "demo_gif": "anim_gifs/0293.gif",
+              "demo_gif": "anim-gifs/0293.gif",
               "demo_gif_id": "0293",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -1140,7 +1149,7 @@ window.PLAN_V6 = {
             "eccentric": "吸气，控制 2-3 秒把手回到起始位",
             "return": "全程腰背中立不圆背；不耸肩"
           },
-          "demo_gif": "anim_gifs/1350.gif",
+          "demo_gif": "anim-gifs/1350.gif",
           "demo_gif_id": "1350",
           "demo_gif_match": "exact"
         },
@@ -1158,7 +1167,7 @@ window.PLAN_V6 = {
               "name": "高拉背（反握窄握）",
               "key_points": "高拉背器械双手反握窄距（掌心朝自己，距约 10-15 cm）；挺胸沉肩，肘贴身前下拉至胸下沿；重量宜比宽握略轻",
               "stop": "肩前侧痛 → 改宽握",
-              "demo_gif": "anim_gifs/0673.gif",
+              "demo_gif": "anim-gifs/0673.gif",
               "demo_gif_id": "0673",
               "demo_gif_match": "exact",
               "phases": {
@@ -1180,7 +1189,7 @@ window.PLAN_V6 = {
             "eccentric": "回放（离心）: 吸气，控制 2–3 秒把把手匀速放回起始位，手臂不完全伸直（留一点微屈，保持张力），肩胛不全松、不耸肩。",
             "return": "肘始终贴身前不外展；身体不后仰"
           },
-          "demo_gif": "anim_gifs/0818.gif",
+          "demo_gif": "anim-gifs/0818.gif",
           "demo_gif_id": "0818",
           "demo_gif_match": "exact"
         },
@@ -1198,7 +1207,7 @@ window.PLAN_V6 = {
               "name": "五人站绳索弯举",
               "key_points": "五人站低位滑轮接直杆；面对滑轮站立，双手正握、大臂贴体两侧；以肘为轴弯举至前臂接近垂直，控制慢放",
               "stop": "肘内侧痛 → 降重",
-              "demo_gif": "anim_gifs/0868.gif",
+              "demo_gif": "anim-gifs/0868.gif",
               "demo_gif_id": "0868",
               "demo_gif_match": "exact",
               "phases": {
@@ -1215,7 +1224,7 @@ window.PLAN_V6 = {
               "name": "肱二头肌训练机",
               "key_points": "坐进肱二头肌训练器，上臂平放在斜垫上贴实（肘对齐转轴）；双手正握把手，以肘为轴弯举；顶峰停 1 秒慢放",
               "stop": "肘痛 → 降重",
-              "demo_gif": "anim_gifs/0575.gif",
+              "demo_gif": "anim-gifs/0575.gif",
               "demo_gif_id": "0575",
               "demo_gif_match": "exact",
               "phases": {
@@ -1232,7 +1241,7 @@ window.PLAN_V6 = {
               "name": "杠铃弯举",
               "key_points": "双脚与肩同宽站直、核心收紧；反握杠铃于体前，大臂贴紧身体固定；只屈肘把杠铃卷到肩前，顶峰刻意收紧 1 秒；2-3 秒控制下放，不甩腰、不前后晃",
               "stop": "肘内侧痛 → 减重；腰不适 → 检查是否晃动借力。禁忌：肘关节炎症急性期应谨慎。",
-              "demo_gif": "anim_gifs/0031.gif",
+              "demo_gif": "anim-gifs/0031.gif",
               "demo_gif_id": "0031",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -1253,7 +1262,7 @@ window.PLAN_V6 = {
               "name": "哑铃交替弯举",
               "key_points": "双手各持哑铃于体侧、掌心相对；弯举一边时前臂逐渐外旋到掌心朝肩，大臂固定；左右交替；顶峰收紧、慢放，不靠身体摆动",
               "stop": "肘内侧痛 → 减重。禁忌：肘关节炎症急性期应谨慎。",
-              "demo_gif": "anim_gifs/0285.gif",
+              "demo_gif": "anim-gifs/0285.gif",
               "demo_gif_id": "0285",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -1279,7 +1288,7 @@ window.PLAN_V6 = {
             "eccentric": "吸气，控制 2-3 秒放回至起始位（手臂不完全伸直）",
             "return": "上臂贴垫不动，身体不前后晃动借力"
           },
-          "demo_gif": "anim_gifs/0575.gif",
+          "demo_gif": "anim-gifs/0575.gif",
           "demo_gif_id": "0575",
           "demo_gif_match": "exact"
         },
@@ -1301,7 +1310,7 @@ window.PLAN_V6 = {
               "name": "跑步机快走",
               "key_points": "上机调速度 5-6.5 km/h；不扶把手，正常步幅前后摆臂；持续 10 分钟保持对话节奏",
               "stop": "胸闷头晕 → 停",
-              "demo_gif": "anim_gifs/3666.gif",
+              "demo_gif": "anim-gifs/3666.gif",
               "demo_gif_id": "3666",
               "demo_gif_match": "exact",
               "phases": {
@@ -1323,7 +1332,7 @@ window.PLAN_V6 = {
             "eccentric": "保持节奏；阻力不增",
             "return": "到点后降阻力、慢 1-2 分钟再下"
           },
-          "demo_gif": "anim_gifs/2141.gif",
+          "demo_gif": "anim-gifs/2141.gif",
           "demo_gif_id": "2141",
           "demo_gif_match": "exact"
         },
@@ -1378,7 +1387,7 @@ window.PLAN_V6 = {
             "eccentric": "控制约 2 秒回放，身体不前倾后仰、不借惯性甩动",
             "return": "手回到肩下方仍保持张力，接下一次"
           },
-          "demo_gif": "anim_gifs/1022-tc5dYrf.gif",
+          "demo_gif": "anim-gifs/1022-tc5dYrf.gif",
           "demo_gif_id": "1022",
           "demo_gif_match": "exact",
           "substitutes": [
@@ -1387,7 +1396,7 @@ window.PLAN_V6 = {
               "name": "弹力带 Y 字平举（肩胛激活）",
               "key_points": "视频要点：只动肩、不动脊柱，别做成挺腰抬上身；手肘微屈，沿约30°的Y形上举；回程弹力带不松掉；幅度以肩不耸、腰不顶为限",
               "stop": "肩峰撞击痛、手麻，或必须靠挺腰才能抬起 → 减重或停",
-              "demo_gif": "anim_gifs/1017-aHDy5O5.gif",
+              "demo_gif": "anim-gifs/1017-aHDy5O5.gif",
               "demo_gif_id": "1017",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -1413,7 +1422,7 @@ window.PLAN_V6 = {
               "primary_equipment_id": "treadmill",
               "key_points": "速度 5-6 km/h、正常步幅、不扶把手；走到微热、能正常说话即可",
               "stop": "胸闷、头晕 → 立即停止",
-              "demo_gif": "anim_gifs/3666.gif",
+              "demo_gif": "anim-gifs/3666.gif",
               "demo_gif_id": "3666",
               "demo_gif_match": "exact",
               "phases": {
@@ -1446,7 +1455,7 @@ window.PLAN_V6 = {
               "name": "五人站绳索站姿推举",
               "key_points": "五人站低位滑轮，绳索从体侧向上；双脚与肩同宽站直；把手从耳侧向上推至接近伸直，肘略前于躯干、不锁肘",
               "stop": "肩部刺痛 → 降重",
-              "demo_gif": "anim_gifs/0219.gif",
+              "demo_gif": "anim-gifs/0219.gif",
               "demo_gif_id": "0219",
               "demo_gif_match": "exact",
               "phases": {
@@ -1463,7 +1472,7 @@ window.PLAN_V6 = {
               "name": "哑铃坐姿肩上推举",
               "key_points": "坐直背贴凳，哑铃举到耳侧、肘略前于躯干；吸气撑稳核心，沿面部两侧垂直上推；顶端不锁肘不耸肩，下放回耳侧即止；较重时先用腿把哑铃顶到肩上",
               "stop": "肩峰撞击痛（抬臂某角度剧痛）→ 减重并缩小范围；腰不适 → 检查是否顶腰。禁忌：肩峰撞击综合征、肩袖损伤、颈椎病患者应谨慎或避免。",
-              "demo_gif": "anim_gifs/0405.gif",
+              "demo_gif": "anim-gifs/0405.gif",
               "demo_gif_id": "0405",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -1484,7 +1493,7 @@ window.PLAN_V6 = {
               "name": "哑铃站姿交替推举",
               "key_points": "双脚与肩同宽站稳、微收腹收臀；哑铃在肩侧，一次推一侧到头顶正上方；全程躯干不后仰不挺腰；站姿更考验核心，先用轻重量",
               "stop": "腰不适 → 检查核心是否收紧、是否顶腰；肩峰撞击痛 → 减重并缩小范围。禁忌：腰椎间盘突出、肩峰撞击综合征应谨慎。",
-              "demo_gif": "anim_gifs/0414.gif",
+              "demo_gif": "anim-gifs/0414.gif",
               "demo_gif_id": "0414",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -1510,8 +1519,8 @@ window.PLAN_V6 = {
             "eccentric": "吸气，控制 2-3 秒把手放回耳侧",
             "return": "腰不后仰、不弓背；肋骨不外翻"
           },
-          "demo_gif": "anim_gifs/0603.gif",
-          "demo_gif_id": "0603",
+          "demo_gif": "anim-gifs/seated_press.gif",
+          "demo_gif_id": "seated_press",
           "demo_gif_match": "exact"
         },
         {
@@ -1528,7 +1537,7 @@ window.PLAN_V6 = {
               "name": "五人站绳索单臂侧平举",
               "key_points": "身体侧对五人站低位滑轮，外侧手穿过体前握把手；肘微屈，把外侧臂抬至与肩同高即止；控制慢放",
               "stop": "肩外侧刺痛 → 降重",
-              "demo_gif": "anim_gifs/0192.gif",
+              "demo_gif": "anim-gifs/0192.gif",
               "demo_gif_id": "0192",
               "demo_gif_match": "exact",
               "phases": {
@@ -1545,7 +1554,7 @@ window.PLAN_V6 = {
               "name": "哑铃侧平举",
               "key_points": "持轻哑铃于体前、身体微前倾；肘微屈固定，想象把手向身体两侧远端延长再抬到肩高，略向身体前侧 30°三角肌受力更好；躯干不后仰，下放到碰到大腿就起、不垂到底；宁轻勿重",
               "stop": "肩外侧刺痛 → 降重量并只抬到 60°；斜方明显酸紧 → 检查是否耸肩、是否过重。禁忌：肩峰撞击综合征应谨慎。",
-              "demo_gif": "anim_gifs/0334.gif",
+              "demo_gif": "anim-gifs/0334.gif",
               "demo_gif_id": "0334",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -1571,7 +1580,7 @@ window.PLAN_V6 = {
             "eccentric": "吸气，控制 2-3 秒把肘放回起始位",
             "return": "肘始终托在垫上不脱离；抬到肩高即止（约 90°），不甩不借力"
           },
-          "demo_gif": "anim_gifs/0584.gif",
+          "demo_gif": "anim-gifs/0584.gif",
           "demo_gif_id": "0584",
           "demo_gif_match": "exact"
         },
@@ -1589,7 +1598,7 @@ window.PLAN_V6 = {
               "name": "五人站绳索面拉（同样练到后束）",
               "key_points": "五人站滑轮调至面部高度接绳索把手；双手掌心相对、肘微屈；肘外展把绳索拉向面部，手腕外旋；不耸肩",
               "stop": "肩前不适 → 降重",
-              "demo_gif": "anim_gifs/0233.gif",
+              "demo_gif": "anim-gifs/0233.gif",
               "demo_gif_id": "0233",
               "demo_gif_match": "close",
               "phases": {
@@ -1606,7 +1615,7 @@ window.PLAN_V6 = {
               "name": "哑铃俯身反向飞鸟",
               "key_points": "屈髋俯身、背平直，哑铃垂于肩下；肘保持微屈角度，肩后束发力把哑铃向两侧打开到与肩同高；想象向远端延长，肩胛不过度后缩代偿；慢放",
               "stop": "颈部代偿酸痛 → 减重、检查是否耸肩；肩峰痛 → 减小幅度。禁忌：肩峰撞击综合征、颈椎病患者应谨慎。",
-              "demo_gif": "anim_gifs/2292.gif",
+              "demo_gif": "anim-gifs/2292.gif",
               "demo_gif_id": "2292",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -1632,7 +1641,7 @@ window.PLAN_V6 = {
             "eccentric": "吸气，控制 2-3 秒双臂回到胸前",
             "return": "躯干稳定不前倾借力；不用惯性甩"
           },
-          "demo_gif": "anim_gifs/0602.gif",
+          "demo_gif": "anim-gifs/0602.gif",
           "demo_gif_id": "0602",
           "demo_gif_match": "exact"
         },
@@ -1651,7 +1660,7 @@ window.PLAN_V6 = {
               "name": "反飞鸟训练器（后束模式）",
               "key_points": "背对反飞鸟训练器坐正（后束模式）；胸口贴靠垫，肘微屈；三角肌后束发力把双臂向后展开，顶峰停 1 秒",
               "stop": "颈部代偿 → 降重",
-              "demo_gif": "anim_gifs/0601.gif",
+              "demo_gif": "anim-gifs/0601.gif",
               "demo_gif_id": "0601",
               "demo_gif_match": "exact",
               "phases": {
@@ -1673,7 +1682,7 @@ window.PLAN_V6 = {
             "eccentric": "回放（离心）: 吸气，控制 2–3 秒把绳索匀速放回起始位，保持绳索张力不松，躯干不前后晃动。",
             "return": "全程不耸肩；肘始终高于肩水平"
           },
-          "demo_gif": "anim_gifs/0233.gif",
+          "demo_gif": "anim-gifs/0233.gif",
           "demo_gif_id": "0233",
           "demo_gif_match": "close"
         },
@@ -1694,7 +1703,7 @@ window.PLAN_V6 = {
               "equipment_name": "自重",
               "key_points": "俯卧，前臂撑地、肘在肩正下方；双脚与肩同宽、脚尖着地；收紧腹臀，从肩到脚踝成一条直线；臀不塌不翘；自然呼吸不憋气",
               "stop": "腰不适 → 检查是否塌腰，可改为膝撑平板；肩不适 → 检查肘的位置和肩胛稳定。禁忌：椎间盘突出急性期、肩峰撞击综合征应谨慎。",
-              "demo_gif": "anim_gifs/2135.gif",
+              "demo_gif": "anim-gifs/2135.gif",
               "demo_gif_id": "2135",
               "demo_gif_match": "close",
               "phases": {
@@ -1713,7 +1722,7 @@ window.PLAN_V6 = {
               "name": "悬垂举腿",
               "key_points": "正握单杠自然悬挂；先收核心、骨盆微后倾，用下腹把腿（屈膝更易、直腿更难）抬到大腿与地面平行；不靠摆动甩腿；顶端停 1 秒慢放",
               "stop": "腰不适 → 检查核心是否收紧、是否卷骨盆；肩不适 → 检查握力是否足够、握法是否舒适。禁忌：腰椎间盘突出急性期、肩袖损伤应谨慎。",
-              "demo_gif": "anim_gifs/0472.gif",
+              "demo_gif": "anim-gifs/0472.gif",
               "demo_gif_id": "0472",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -1734,7 +1743,7 @@ window.PLAN_V6 = {
               "name": "健腹轮前推（跪姿）",
               "key_points": "跪姿双手握轮于肩下；先把肩胛顶起、深吸气撑紧核心；身体保持一条直线向前推出，只推到自己能收回来的幅度；用核心把轮拉回，循序渐进，腰不塌",
               "stop": "腰不适 → 缩短滚动距离、检查核心是否收紧；肩不适 → 检查肩部是否稳定。禁忌：腰椎间盘突出急性期、肩袖损伤应极其谨慎。",
-              "demo_gif": "anim_gifs/0857.gif",
+              "demo_gif": "anim-gifs/0857.gif",
               "demo_gif_id": "0857",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -1760,7 +1769,7 @@ window.PLAN_V6 = {
             "eccentric": "吸气，控制 2-3 秒回到起始位",
             "return": "下背始终贴垫；不用手拉"
           },
-          "demo_gif": "anim_gifs/1452.gif",
+          "demo_gif": "anim-gifs/1452.gif",
           "demo_gif_id": "1452",
           "demo_gif_match": "exact"
         },
@@ -1834,9 +1843,9 @@ window.PLAN_V6 = {
             "return": "回到正中不卸力，立即向另一侧旋转或完成规定次数后换侧；全程骨盆稳定不随躯干转动"
           },
           "common_errors": "用手臂拉把手带动旋转 → 手臂仅辅助固定，旋转由腹外斜肌发起\n骨盆随躯干一起转动 → 骨盆始终正对前方，只有胸椎段旋转\n旋转幅度过大导致腰椎参与 → 幅度由器械限定，不强行加大幅度\n靠垫借力后推 → 背部轻触靠垫即可，不主动后顶\n憋气 → 保持呼吸节律，发力时呼气、回位时吸气",
-          "demo_gif": "anim_gifs/placeholder_shoulder_stretch.gif",
-          "demo_gif_id": "placeholder_shoulder_stretch",
-          "demo_gif_match": "sketch"
+          "demo_gif": "anim-gifs/placeholder_shoulder_stretch.gif",
+          "demo_gif_id": "rotary_crunch",
+          "demo_gif_match": "exact"
         },
         {
           "name": "拉伸：肩 + 核心",
@@ -1890,7 +1899,7 @@ window.PLAN_V6 = {
             "eccentric": "控制约 2 秒缓慢放回，弹力带始终保持张力",
             "return": "回到体前不卸力，立即接下一次，躯干与脊柱保持不动"
           },
-          "demo_gif": "anim_gifs/1017-aHDy5O5.gif",
+          "demo_gif": "anim-gifs/1017-aHDy5O5.gif",
           "demo_gif_id": "1017",
           "demo_gif_match": "exact",
           "substitutes": [
@@ -1899,7 +1908,7 @@ window.PLAN_V6 = {
               "name": "弹力带交替弯举（二头预热）",
               "key_points": "大臂贴住身体不前后摆动，全程轻而可控；只是预热，不上重量、不借力",
               "stop": "肘部刺痛 → 停止改做肩腕绕环",
-              "demo_gif": "anim_gifs/0968-3omWx6P.gif",
+              "demo_gif": "anim-gifs/0968-3omWx6P.gif",
               "demo_gif_id": "0968",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -1925,7 +1934,7 @@ window.PLAN_V6 = {
               "primary_equipment_id": "treadmill",
               "key_points": "速度 5-6 km/h、正常步幅、不扶把手；走到微热、能正常说话即可",
               "stop": "胸闷、头晕 → 立即停止",
-              "demo_gif": "anim_gifs/3666.gif",
+              "demo_gif": "anim-gifs/3666.gif",
               "demo_gif_id": "3666",
               "demo_gif_match": "exact",
               "phases": {
@@ -1957,7 +1966,7 @@ window.PLAN_V6 = {
               "name": "肱二头肌训练机",
               "key_points": "坐进肱二头肌训练器，上臂平放在斜垫上贴实（肘对齐转轴）；双手正握把手，以肘为轴弯举；顶峰停 1 秒慢放",
               "stop": "肘痛 → 降重",
-              "demo_gif": "anim_gifs/0575.gif",
+              "demo_gif": "anim-gifs/0575.gif",
               "demo_gif_id": "0575",
               "demo_gif_match": "exact",
               "phases": {
@@ -1974,7 +1983,7 @@ window.PLAN_V6 = {
               "name": "哑铃集中弯举",
               "key_points": "坐凳、双腿分开，持铃侧大臂后侧顶住同侧大腿内侧；只屈肘把哑铃向肩方向卷，顶峰收紧；躯干不晃，最大程度孤立二头",
               "stop": "肘内侧痛 → 减重。禁忌：肘关节炎症急性期应谨慎。",
-              "demo_gif": "anim_gifs/0297.gif",
+              "demo_gif": "anim-gifs/0297.gif",
               "demo_gif_id": "0297",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -1995,7 +2004,7 @@ window.PLAN_V6 = {
               "name": "哑铃锤式弯举",
               "key_points": "持哑铃掌心相对、全程保持中立握；大臂贴身固定，屈肘把哑铃抬起；顶峰收紧慢放；锤式更多练肱肌与肱桡肌，增厚手臂整体围度",
               "stop": "肘或腕痛 → 减重。禁忌：肘关节炎症、腕管综合征应谨慎。",
-              "demo_gif": "anim_gifs/0313.gif",
+              "demo_gif": "anim-gifs/0313.gif",
               "demo_gif_id": "0313",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -2021,7 +2030,7 @@ window.PLAN_V6 = {
             "eccentric": "吸气，控制 2-3 秒放回至起始位（手臂不完全伸直）",
             "return": "上臂贴垫不动，身体不前后晃动借力"
           },
-          "demo_gif": "anim_gifs/0575.gif",
+          "demo_gif": "anim-gifs/0575.gif",
           "demo_gif_id": "0575",
           "demo_gif_match": "exact"
         },
@@ -2039,7 +2048,7 @@ window.PLAN_V6 = {
               "name": "肱二头肌训练机",
               "key_points": "坐进肱二头肌训练器，上臂平放贴实斜垫（肘对齐转轴）；以肘为轴弯举至前臂接近垂直，顶峰停 1 秒慢放",
               "stop": "肘内侧痛 → 降重",
-              "demo_gif": "anim_gifs/0575.gif",
+              "demo_gif": "anim-gifs/0575.gif",
               "demo_gif_id": "0575",
               "demo_gif_match": "exact",
               "phases": {
@@ -2056,7 +2065,7 @@ window.PLAN_V6 = {
               "name": "哑铃交替弯举",
               "key_points": "双手持哑铃掌心相对，大臂贴身固定；弯举时前臂外旋到掌心朝肩，左右交替；顶峰收紧、控制慢放，不借身体摆动",
               "stop": "肘内侧痛 → 减重。禁忌：肘关节炎症急性期应谨慎。",
-              "demo_gif": "anim_gifs/0285.gif",
+              "demo_gif": "anim-gifs/0285.gif",
               "demo_gif_id": "0285",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -2082,7 +2091,7 @@ window.PLAN_V6 = {
             "eccentric": "吸气，控制 2-3 秒放回至起始位",
             "return": "上臂贴体不动，身体不前后晃动"
           },
-          "demo_gif": "anim_gifs/0868.gif",
+          "demo_gif": "anim-gifs/0868.gif",
           "demo_gif_id": "0868",
           "demo_gif_match": "exact"
         },
@@ -2099,7 +2108,7 @@ window.PLAN_V6 = {
               "name": "五人站绳索下压",
               "key_points": "五人站高位滑轮接直杆；面对滑轮站立，大臂贴身两侧、肘弯约 90°，上身微前倾；仅肘伸屈把杆压至大腿前",
               "stop": "肘痛 → 降重",
-              "demo_gif": "anim_gifs/0201.gif",
+              "demo_gif": "anim-gifs/0201.gif",
               "demo_gif_id": "0201",
               "demo_gif_match": "exact",
               "phases": {
@@ -2116,7 +2125,7 @@ window.PLAN_V6 = {
               "name": "哑铃站姿臂屈伸",
               "key_points": "站姿核心收紧，双手（或单臂）持哑铃过头，大臂贴近耳侧固定；只屈肘把哑铃放到头后，再三头发力伸回；肘尖朝天不外展",
               "stop": "肘内侧痛 → 减重；肩不适 → 检查大臂位置是否过高。禁忌：肘关节炎症、肩峰撞击综合征应谨慎。",
-              "demo_gif": "anim_gifs/0430.gif",
+              "demo_gif": "anim-gifs/0430.gif",
               "demo_gif_id": "0430",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -2142,7 +2151,7 @@ window.PLAN_V6 = {
             "eccentric": "吸气，控制 2-3 秒把杆放回肘弯 90° 起始位",
             "return": "大臂始终贴体不动，只有肘在动；不耸肩不后仰"
           },
-          "demo_gif": "anim_gifs/0201.gif",
+          "demo_gif": "anim-gifs/0201.gif",
           "demo_gif_id": "0201",
           "demo_gif_match": "exact"
         },
@@ -2160,7 +2169,7 @@ window.PLAN_V6 = {
               "name": "臂下压背肌（下压模式）",
               "key_points": "面对臂下压器械，双手正握直杆、大臂贴身、肘弯约 90°；仅肘伸屈下压至大腿前；与过头版相比长头刺激略少",
               "stop": "肘痛 → 降重",
-              "demo_gif": "anim_gifs/0201.gif",
+              "demo_gif": "anim-gifs/0201.gif",
               "demo_gif_id": "0201",
               "demo_gif_match": "close",
               "phases": {
@@ -2177,7 +2186,7 @@ window.PLAN_V6 = {
               "name": "哑铃坐姿过顶臂屈伸",
               "key_points": "坐直，双手托住一个哑铃举过头顶，大臂贴耳、肘尖朝天；只屈肘把哑铃缓慢放到颈后，再三头发力伸回；下放充分拉长三头长头，肘不外展、腰不后仰",
               "stop": "肩肘痛 → 减重",
-              "demo_gif": "anim_gifs/2188.gif",
+              "demo_gif": "anim-gifs/2188.gif",
               "demo_gif_id": "2188",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -2202,7 +2211,7 @@ window.PLAN_V6 = {
             "eccentric": "吸气，控制 2-3 秒把绳索放回肘弯位",
             "return": "上臂始终贴耳；不前倾借力"
           },
-          "demo_gif": "anim_gifs/1722.gif",
+          "demo_gif": "anim-gifs/1722.gif",
           "demo_gif_id": "1722",
           "demo_gif_match": "exact"
         },
@@ -2279,9 +2288,9 @@ window.PLAN_V6 = {
             "return": "回到起始位不卸力，立即接下一次；全程躯干稳定不后仰、不耸肩。教学要点：此动作主要练上半段，下放不需要完全到底，保持肱肌持续张力。"
           },
           "common_errors": "大臂前后晃动借力 → 大臂始终贴住身体两侧，仅肘关节屈伸\n躯干后仰甩起 → 核心收紧，身体保持稳定；选择可控重量\n手腕翻转（变成旋后弯举）→ 全程掌心相对，手腕严格中立\n耸肩 → 肩胛下沉，斜方不参与\n下放到底卸力 → 放至大臂垂直、肘微屈即停，保持张力",
-          "demo_gif": "anim_gifs/placeholder_elliptical.gif",
-          "demo_gif_id": "placeholder_elliptical",
-          "demo_gif_match": "sketch"
+          "demo_gif": "anim-gifs/placeholder_elliptical.gif",
+          "demo_gif_id": "cable_hammer",
+          "demo_gif_match": "exact"
         },
         {
           "name": "椭圆机/楼梯机（有氧）",
@@ -2301,7 +2310,7 @@ window.PLAN_V6 = {
               "name": "跑步机快走",
               "key_points": "上机调速度 5-6.5 km/h；不扶把手，正常步幅前后摆臂；持续 12 分钟保持对话节奏",
               "stop": "胸闷头晕 → 停",
-              "demo_gif": "anim_gifs/3666.gif",
+              "demo_gif": "anim-gifs/3666.gif",
               "demo_gif_id": "3666",
               "demo_gif_match": "exact",
               "phases": {
@@ -2323,7 +2332,7 @@ window.PLAN_V6 = {
             "eccentric": "保持节奏不加速",
             "return": "到点后降阻力、慢 1-2 分钟再下"
           },
-          "demo_gif": "anim_gifs/2141.gif",
+          "demo_gif": "anim-gifs/2141.gif",
           "demo_gif_id": "2141",
           "demo_gif_match": "exact"
         },
@@ -2378,7 +2387,7 @@ window.PLAN_V6 = {
             "eccentric": "缓慢转回，抬起的手收回撑地",
             "return": "收后腿站起，换另一侧交替进行"
           },
-          "demo_gif": "anim_gifs/1604-DFGXwZr.gif",
+          "demo_gif": "anim-gifs/1604-DFGXwZr.gif",
           "demo_gif_id": "1604",
           "demo_gif_match": "exact",
           "substitutes": [
@@ -2387,7 +2396,7 @@ window.PLAN_V6 = {
               "name": "摇摆青蛙趴（动态开髋）",
               "key_points": "双膝向两侧打开，骨盆保持前倾“撅臀”再前后移动，膝盖轻轻对抗地面；脊柱中立、不塌腰",
               "stop": "髋根刺痛或膝盖受压疼痛 → 减小幅度、垫软垫",
-              "demo_gif": "anim_gifs/2571-2Dk4xQV.gif",
+              "demo_gif": "anim-gifs/2571-2Dk4xQV.gif",
               "demo_gif_id": "2571",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -2412,7 +2421,7 @@ window.PLAN_V6 = {
               "name": "箭步蹲转体（动态热身）",
               "key_points": "弓步稳定后再转体，转来自胸椎而非甩腰；前膝对准脚尖、不内扣",
               "stop": "膝腰疼痛或站不稳 → 减小步幅与转幅",
-              "demo_gif": "anim_gifs/1688-K9VL0Jq.gif",
+              "demo_gif": "anim-gifs/1688-K9VL0Jq.gif",
               "demo_gif_id": "1688",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -2438,7 +2447,7 @@ window.PLAN_V6 = {
               "primary_equipment_id": "treadmill",
               "key_points": "速度 5-6 km/h、正常步幅、不扶把手；走到微热、能正常说话即可",
               "stop": "胸闷、头晕 → 立即停止",
-              "demo_gif": "anim_gifs/3666.gif",
+              "demo_gif": "anim-gifs/3666.gif",
               "demo_gif_id": "3666",
               "demo_gif_match": "exact",
               "phases": {
@@ -2472,7 +2481,7 @@ window.PLAN_V6 = {
               "name": "哈克深蹲机",
               "key_points": "后背与肩贴实靠垫，双脚踩踏板中段与肩同宽、脚尖微外展；沿轨道蹲起，蹲到大腿约与踏板平行（或更浅）；蹬起膝不锁死",
               "stop": "膝前尖锐痛 → 检查膝盖是否内扣、下蹲深度是否过大；腰不适 → 检查背部是否贴紧靠垫。禁忌：膝关节术后恢复期、腰椎间盘突出急性期应谨慎。腰部离垫或腰部不适→立即减重并检查背部是否全程贴紧靠垫。",
-              "demo_gif": "anim_gifs/0743.gif",
+              "demo_gif": "anim-gifs/0743.gif",
               "demo_gif_id": "0743",
               "demo_gif_match": "exact",
               "phases": {
@@ -2490,7 +2499,7 @@ window.PLAN_V6 = {
               "name": "哑铃高脚杯深蹲",
               "key_points": "双脚与肩同宽、脚尖微外展；双手竖抱一个哑铃贴在胸前；屈髋屈膝下蹲到大腿至少与地面平行，膝盖方向跟脚尖、不内扣；脚跟蹬地站起，全程腰背中立、胸挺起",
               "stop": "腰不适 → 检查躯干是否过度前倾、核心是否收紧；膝前痛 → 检查膝盖轨迹。禁忌：腰椎间盘突出急性期、膝关节术后应谨慎。",
-              "demo_gif": "anim_gifs/1760.gif",
+              "demo_gif": "anim-gifs/1760.gif",
               "demo_gif_id": "1760",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -2511,7 +2520,7 @@ window.PLAN_V6 = {
               "name": "哑铃保加利亚分腿蹲",
               "key_points": "后脚脚背搭在长凳上，前脚向前迈到小腿大致垂直；持哑铃、重心偏前腿；下蹲到前腿大腿接近水平，前膝跟脚尖；发力向后上方站起",
               "stop": "前膝前痛 → 检查前脚位置和膝盖轨迹；髋不适 → 检查后脚高度和髋关节活动度。禁忌：膝关节术后、髋置换术后应极其谨慎或避免。",
-              "demo_gif": "anim_gifs/0410.gif",
+              "demo_gif": "anim-gifs/0410.gif",
               "demo_gif_id": "0410",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -2537,7 +2546,7 @@ window.PLAN_V6 = {
             "eccentric": "回放（离心）: 吸气，控制 2–3 秒把膝弯曲回到起始位。下放深度以大小腿约 90° 或柔韧允许的范围为准，关键是**腰部始终贴紧靠垫不离开**。",
             "return": "下放时膝不内扣、腰不离垫；膝微屈即止不锁死"
           },
-          "demo_gif": "anim_gifs/0739.gif",
+          "demo_gif": "anim-gifs/0739.gif",
           "demo_gif_id": "0739",
           "demo_gif_match": "exact"
         },
@@ -2555,7 +2564,7 @@ window.PLAN_V6 = {
               "name": "倒蹬机（轻量半程）",
               "key_points": "坐上倒蹬机，用明显轻的重量；双脚踩踏板中段；只做上半程——推到接近伸直停 1 秒，放回半程位不放到最低 膝盖方向始终与第二脚趾对齐 下蹲深度以骨盆不翻转为限 蹬起时避免膝盖完全锁死",
               "stop": "膝痛 → 立即停止并缩小行程；腰不适 → 检查背部是否贴紧靠垫。禁忌：膝关节术后恢复期、髌骨软化症、半月板损伤应极其谨慎或避免。",
-              "demo_gif": "anim_gifs/0739.gif",
+              "demo_gif": "anim-gifs/0739.gif",
               "demo_gif_id": "0739",
               "demo_gif_match": "exact",
               "phases": {
@@ -2573,7 +2582,7 @@ window.PLAN_V6 = {
               "name": "哑铃箭步蹲",
               "key_points": "双手持哑铃于体侧；一脚向前迈一大步，下蹲到前腿大腿水平、前小腿垂直、后膝接近地面但不砸地；前脚蹬地站起或交替向前；上身直立、前膝不内扣",
               "stop": "前膝前痛 → 检查步幅和膝盖轨迹；髋不适 → 检查步幅和髋关节活动度。禁忌：膝关节术后、髋置换术后应极其谨慎。",
-              "demo_gif": "anim_gifs/0336.gif",
+              "demo_gif": "anim-gifs/0336.gif",
               "demo_gif_id": "0336",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -2599,7 +2608,7 @@ window.PLAN_V6 = {
             "eccentric": "吸气，控制 2-3 秒把小腿放回起始位",
             "return": "躯干不前倾借力；顶峰不锁膝"
           },
-          "demo_gif": "anim_gifs/0585.gif",
+          "demo_gif": "anim-gifs/0585.gif",
           "demo_gif_id": "0585",
           "demo_gif_match": "exact"
         },
@@ -2617,7 +2626,7 @@ window.PLAN_V6 = {
               "name": "臀部训练器（补臀）",
               "key_points": "按机器标注姿势坐进臀部训练器，躯干贴实靠背；一侧腿置于蹬垫上，臀部发力向后蹬出至髋伸展；顶峰停 1 秒慢回",
               "stop": "腰痛 → 停",
-              "demo_gif": "anim_gifs/2286.gif",
+              "demo_gif": "anim-gifs/2286.gif",
               "demo_gif_id": "2286",
               "demo_gif_match": "exact",
               "phases": {
@@ -2634,7 +2643,7 @@ window.PLAN_V6 = {
               "name": "杠铃罗马尼亚硬拉",
               "key_points": "双脚与髋同宽、膝微屈固定；杠铃贴大腿，屈髋把臀向后推、杠铃沿腿下滑到小腿中段（腘绳有拉伸即可）；起时先夹臀伸髋站起，膝盖不向前顶、背全程中立；更偏臀与腘绳，适合多数人",
               "stop": "腰痛 → 立即停止并检查腰部是否代偿；髋不适 → 检查机器使用姿势。禁忌：腰椎间盘突出急性期、髋关节术后恢复期应极其谨慎。",
-              "demo_gif": "anim_gifs/0085.gif",
+              "demo_gif": "anim-gifs/0085.gif",
               "demo_gif_id": "0085",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -2655,7 +2664,7 @@ window.PLAN_V6 = {
               "name": "哑铃直腿硬拉",
               "key_points": "双脚与髋同宽、膝只微屈；持哑铃屈髋下放，到腘绳能承受的幅度即可；腘绳主导站起、不完全站直松掉；对腘绳刺激更强但腰压力更大，绷不住就改罗马尼亚硬拉",
               "stop": "腰不适 → 检查是否圆背；腘绳肌拉伤感 → 立即停止。禁忌：腰椎间盘突出急性期、椎管狭窄应极其谨慎。",
-              "demo_gif": "anim_gifs/0432.gif",
+              "demo_gif": "anim-gifs/0432.gif",
               "demo_gif_id": "0432",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -2681,7 +2690,7 @@ window.PLAN_V6 = {
             "eccentric": "吸气，控制 2-3 秒把小腿放回起始位",
             "return": "骨盆始终贴垫，不抬臀借力"
           },
-          "demo_gif": "anim_gifs/0599.gif",
+          "demo_gif": "anim-gifs/0599.gif",
           "demo_gif_id": "0599",
           "demo_gif_match": "exact"
         },
@@ -2701,7 +2710,7 @@ window.PLAN_V6 = {
               "key_points": "坐进大腿内外侧训练器，把挡垫调到外侧、膝内侧贴挡板，双腿打开卡住；大腿内侧发力把双腿向中间夹合；控制慢放",
               "stop": "髋部卡顿感 → 减重",
               "uses_same_machine": true,
-              "demo_gif": "anim_gifs/0598.gif",
+              "demo_gif": "anim-gifs/0598.gif",
               "demo_gif_id": "0598",
               "demo_gif_match": "exact",
               "phases": {
@@ -2718,7 +2727,7 @@ window.PLAN_V6 = {
               "name": "臀部训练器",
               "key_points": "按机器标注姿势使用臀部训练器；躯干贴实，臀部发力完成动作行程；顶峰停 1 秒慢回",
               "stop": "腰痛 → 立即停止并检查腰部是否代偿；髋不适 → 检查机器使用姿势。禁忌：腰椎间盘突出急性期、髋关节术后恢复期应极其谨慎。",
-              "demo_gif": "anim_gifs/2286.gif",
+              "demo_gif": "anim-gifs/2286.gif",
               "demo_gif_id": "2286",
               "demo_gif_match": "exact",
               "phases": {
@@ -2736,7 +2745,7 @@ window.PLAN_V6 = {
               "name": "侧卧直腿内收（自重）",
               "key_points": "侧卧、身体一条直线，上方腿可屈膝踩地辅助；下方腿伸直，用大腿内侧发力把下腿向上抬；顶峰夹紧内收肌停 1 秒、慢放；也可用弹力带加阻力",
               "stop": "髋或腹股沟拉伤感 → 停",
-              "demo_gif": "anim_gifs/3667.gif",
+              "demo_gif": "anim-gifs/3667.gif",
               "demo_gif_id": "3667",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -2761,7 +2770,7 @@ window.PLAN_V6 = {
             "eccentric": "回放（离心）: 吸气，控制 2–3 秒让双腿回到起始位，全程抵抗重量回拉，不要让配重片砸落。保持躯干稳定不歪斜。",
             "return": "躯干不歪、不前倾；不甩"
           },
-          "demo_gif": "anim_gifs/0597.gif",
+          "demo_gif": "anim-gifs/0597.gif",
           "demo_gif_id": "0597",
           "demo_gif_match": "exact"
         },
@@ -2820,9 +2829,9 @@ window.PLAN_V6 = {
             "return": "回到外展位立即接下一次；全程躯干稳定不歪、骨盆不前后倾"
           },
           "common_errors": "躯干前后晃动借力 → 背部挺直，核心收紧，躯干不随腿摆动\n骨盆前倾或后倾 → 骨盆保持中立，腰不反弓\n起始外展幅度过大导致腹股沟拉伤 → 调整挡板至舒适起始位，循序渐进加大幅度\n利用惯性甩腿夹拢 → 推出 2 秒、放回 2-3 秒，全程控制\n只堆次数不收紧 → 每次顶峰主动夹紧 1 秒，质量优先于次数",
-          "demo_gif": "anim_gifs/placeholder_calf_raise.gif",
-          "demo_gif_id": "placeholder_calf_raise",
-          "demo_gif_match": "sketch"
+          "demo_gif": "anim-gifs/placeholder_calf_raise.gif",
+          "demo_gif_id": "hip_adduction",
+          "demo_gif_match": "exact"
         },
         {
           "name": "提踵",
@@ -2838,7 +2847,7 @@ window.PLAN_V6 = {
               "name": "哈克深蹲机提踵",
               "key_points": "哈克机靠垫贴实，前脚掌踩踏板前 1/3、脚跟悬空；膝保持微屈；脚跟下放到底再踮起至最高，顶峰停 1 秒",
               "stop": "跟腱不适 → 减重、减小幅度；肩不适 → 检查肩部垫片位置是否舒适。禁忌：跟腱炎急性期、踝关节扭伤恢复期应极其谨慎。",
-              "demo_gif": "anim_gifs/1383.gif",
+              "demo_gif": "anim-gifs/1383.gif",
               "demo_gif_id": "1383",
               "demo_gif_match": "exact",
               "phases": {
@@ -2856,7 +2865,7 @@ window.PLAN_V6 = {
               "name": "自重站姿提踵",
               "key_points": "前脚掌站台阶边缘、脚跟悬空；脚趾与前脚掌抓稳，小腿发力把脚跟踮到最高停 1 秒，再缓慢放到最低充分拉伸；发力向上略向后，不前倾顶髋、不屈膝借力、躯干不动",
               "stop": "跟腱不适 → 减小幅度、降重；足底不适 → 检查前脚掌支撑是否稳定。禁忌：跟腱炎急性期、足底筋膜炎急性期应极其谨慎。",
-              "demo_gif": "anim_gifs/1373.gif",
+              "demo_gif": "anim-gifs/1373.gif",
               "demo_gif_id": "1373",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -2877,7 +2886,7 @@ window.PLAN_V6 = {
               "name": "哑铃站姿提踵",
               "key_points": "双手各持哑铃于体侧，前脚掌踩垫高、脚跟悬空；踮起向上向后、顶端停 1 秒，慢放拉伸；重量从轻开始，久未练小腿首次 3 组即可",
               "stop": "跟腱不适 → 减重、减小幅度；腰不适 → 检查核心是否收紧。禁忌：跟腱炎急性期、足底筋膜炎急性期应极其谨慎。",
-              "demo_gif": "anim_gifs/0417.gif",
+              "demo_gif": "anim-gifs/0417.gif",
               "demo_gif_id": "0417",
               "demo_gif_match": "exact",
               "free_weight": true,
@@ -2903,8 +2912,8 @@ window.PLAN_V6 = {
             "eccentric": "吸气，控制 2-3 秒把脚跟放回最低位（充分拉伸）",
             "return": "全程前脚掌与脚趾保持抓地不翘起，脚踝稳定不内翻外翻；膝保持微屈不变"
           },
-          "demo_gif": "anim_gifs/1391.gif",
-          "demo_gif_id": "1391",
+          "demo_gif": "anim-gifs/calf_raise.gif",
+          "demo_gif_id": "calf_raise",
           "demo_gif_match": "exact"
         },
         {
