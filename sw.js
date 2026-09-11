@@ -1,5 +1,5 @@
-// 五分化训练动作库 v2.3 Service Worker
-const CACHE_NAME = 'workout-lib-v2.3';
+// 五分化训练动作库 v2.6.0 Service Worker
+const CACHE_NAME = 'workout-lib-v2.6.0';
 const ASSETS = [
   './',
   './index.html',
@@ -8,13 +8,21 @@ const ASSETS = [
   './jsx_compiled2.js',
   './manifest.json',
   './favicon.svg',
-  './vendor/react.min.js',
-  './vendor/react-dom.min.js'
+  './react.min.js',
+  './react-dom.min.js'
 ];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS))
+    caches.open(CACHE_NAME).then((cache) =>
+      Promise.all(
+        ASSETS.map((url) =>
+          cache.add(url).catch((err) => {
+            console.warn('[SW] Failed to cache:', url, err);
+          })
+        )
+      )
+    )
   );
   self.skipWaiting();
 });
@@ -37,7 +45,7 @@ self.addEventListener('fetch', (e) => {
           return fetchResponse;
         }
         const responseToCache = fetchResponse.clone();
-        caches.open(CACHE_NAME).then((cache) => cache.put(e.request, responseToCache));
+        caches.open(CACHE_NAME).then((cache) => cache.put(e.request, responseToCache)).catch(() => {});
         return fetchResponse;
       });
     })
