@@ -127,6 +127,12 @@
     if (!text) return [];
     return text.split(/[；;。\n]/).map((s) => s.trim()).filter((s) => s.length > 1);
   }
+  const safeStorage = {
+    get: (key, fallback = null) => { try { const v = localStorage.getItem(key); return v !== null ? v : fallback; } catch (e) { return fallback; } },
+    set: (key, value) => { try { localStorage.setItem(key, value); return true; } catch (e) { return false; } },
+    getJSON: (key, fallback = null) => { try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; } catch (e) { return fallback; } },
+    setJSON: (key, value) => { try { localStorage.setItem(key, JSON.stringify(value)); return true; } catch (e) { return false; } }
+  };
   const I = {
     Clock: (p) => /* @__PURE__ */ React.createElement("svg", { viewBox: "0 0 24 24", width: p.size || 14, height: p.size || 14, fill: "none", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" }, /* @__PURE__ */ React.createElement("circle", { cx: "12", cy: "12", r: "9" }), /* @__PURE__ */ React.createElement("path", { d: "M12 7v5l3 2" })),
     Close: (p) => /* @__PURE__ */ React.createElement("svg", { viewBox: "0 0 24 24", width: p.size || 14, height: p.size || 14, fill: "none", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round" }, /* @__PURE__ */ React.createElement("path", { d: "M6 6l12 12M18 6L6 18" })),
@@ -152,8 +158,8 @@
     const [expId, setExpId] = useState("beginner_0_3m");
     const [searchQuery, setSearchQuery] = useState("");
     const [showRecords, setShowRecords] = useState(false);
-    const [theme, setTheme] = useState(() => { const s = localStorage.getItem("theme"); if (s) return s; return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; });
-    const [principlesOpen, setPrinciplesOpen] = useState(() => localStorage.getItem("principlesOpen") !== "false");
+    const [theme, setTheme] = useState(() => { const s = safeStorage.get("theme"); if (s) return s; return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; });
+    const [principlesOpen, setPrinciplesOpen] = useState(() => safeStorage.get("principlesOpen") !== "false");
     const [showBackTop, setShowBackTop] = useState(false);
     const [listTransition, setListTransition] = useState("entered");
     const listRef = React.useRef(null);
@@ -161,7 +167,7 @@
     const searchInputRef = React.useRef(null);
 
     // 暗色模式
-    useEffect(() => { document.documentElement.setAttribute("data-theme", theme); localStorage.setItem("theme", theme); }, [theme]);
+    useEffect(() => { document.documentElement.setAttribute("data-theme", theme); safeStorage.set("theme", theme); }, [theme]);
 
     // 回到顶部
     useEffect(() => {
@@ -182,7 +188,7 @@
     }, [activeDay]);
 
     // 训练原则折叠状态持久化
-    const togglePrinciples = () => { const v = !principlesOpen; setPrinciplesOpen(v); localStorage.setItem("principlesOpen", String(v)); };
+    const togglePrinciples = () => { const v = !principlesOpen; setPrinciplesOpen(v); safeStorage.set("principlesOpen", String(v)); };
 
     // 搜索功能
     const allExercises = React.useMemo(() => {
@@ -221,9 +227,11 @@
     const openModal = useCallback((ex) => {
       setSelectedEx(ex);
       setModalClosing(false);
+      try { document.body.classList.add('modal-open'); } catch (e) {}
     }, []);
     const closeModal = useCallback(() => {
       setModalClosing(true);
+      try { document.body.classList.remove('modal-open'); } catch (e) {}
     }, []);
     useEffect(() => {
       let timer;
@@ -235,19 +243,90 @@
       }
       return () => { if (timer) clearTimeout(timer); };
     }, [modalClosing]);
+    useEffect(() => {
+      if (showRecords) {
+        try { document.body.classList.add('modal-open'); } catch (e) {}
+      } else {
+        try { document.body.classList.remove('modal-open'); } catch (e) {}
+      }
+    }, [showRecords]);
     const selectedExRef = React.useRef(selectedEx);
     selectedExRef.current = selectedEx;
     const activeDayRef = React.useRef(activeDay);
     activeDayRef.current = activeDay;
     const closeModalRef = React.useRef(closeModal);
     closeModalRef.current = closeModal;
+    const showRecordsRef = React.useRef(showRecords);
+    showRecordsRef.current = showRecords;
+    const closeRecordsRef = React.useRef(() => setShowRecords(false));
+    closeRecordsRef.current = () => setShowRecords(false);
     useEffect(() => {
       const handleKey = (e) => {
-        if (e.key === "Escape" && selectedExRef.current) {
-          closeModalRef.current();
+        if (showRecordsRef.current) {
+          if (e.key === "Escape") {
+            closeRecordsRef.current();
+            return;
+          }
+          if (e.key === "Tab") {
+            e.preventDefault();
+            const modal = document.querySelector('.modal');
+            if (!modal) return;
+            const focusable = Array.from(modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'));
+            if (focusable.length === 0) return;
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (e.shiftKey) {
+              if (document.activeElement === first || !focusable.includes(document.activeElement)) {
+                last.focus();
+              } else {
+                const idx = focusable.indexOf(document.activeElement);
+                focusable[Math.max(0, idx - 1)].focus();
+              }
+            } else {
+              if (document.activeElement === last || !focusable.includes(document.activeElement)) {
+                first.focus();
+              } else {
+                const idx = focusable.indexOf(document.activeElement);
+                focusable[Math.min(focusable.length - 1, idx + 1)].focus();
+              }
+            }
+            return;
+          }
           return;
         }
-        if (!selectedExRef.current && e.target.tagName !== "INPUT" && e.target.tagName !== "BUTTON") {
+        if (selectedExRef.current) {
+          if (e.key === "Escape") {
+            closeModalRef.current();
+            return;
+          }
+          if (e.key === "Tab") {
+            e.preventDefault();
+            const modal = document.querySelector('.modal');
+            if (!modal) return;
+            const focusable = Array.from(modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'));
+            if (focusable.length === 0) return;
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (e.shiftKey) {
+              if (document.activeElement === first || !focusable.includes(document.activeElement)) {
+                last.focus();
+              } else {
+                const idx = focusable.indexOf(document.activeElement);
+                focusable[Math.max(0, idx - 1)].focus();
+              }
+            } else {
+              if (document.activeElement === last || !focusable.includes(document.activeElement)) {
+                first.focus();
+              } else {
+                const idx = focusable.indexOf(document.activeElement);
+                focusable[Math.min(focusable.length - 1, idx + 1)].focus();
+              }
+            }
+            return;
+          }
+          return;
+        }
+        if (e.target.tagName !== "INPUT" && e.target.tagName !== "BUTTON") {
           if (e.key === "ArrowLeft" && activeDayRef.current > 0) setActiveDay((d) => d - 1);
           if (e.key === "ArrowRight" && activeDayRef.current < DAYS.length - 1) setActiveDay((d) => d + 1);
           if (/^[1-5]$/.test(e.key)) {
@@ -274,7 +353,7 @@
         /* @__PURE__ */ React.createElement("div", { ref: listRef, className: `exercise-list ${listTransition}` }, day.exercises.map((ex, i) => {
           const isMain = ex.type === "main";
           const num = isMain ? i + 1 - day.exercises.slice(0, i).filter((e) => e.type !== "main").length : null;
-          return /* @__PURE__ */ React.createElement(ExerciseCard, { key: ex.name || i, exercise: ex, num, goalId, expId, onClick: () => openModal(ex) });
+          return /* @__PURE__ */ React.createElement(ExerciseCard, { key: `${day.day}-${ex.name || 'ex'}-${i}`, exercise: ex, num, goalId, expId, onClick: () => openModal(ex) });
         })),
         /* @__PURE__ */ React.createElement(DosageFramework, { goalId, expId }),
         /* @__PURE__ */ React.createElement(RiskAndSourceSection, null),
@@ -336,7 +415,7 @@
       return /* @__PURE__ */ React.createElement(
         ExerciseCard,
         {
-          key: ex.name || i,
+          key: `${ex.name || 'ex'}-${i}`,
           exercise: ex,
           num,
           goalId,
@@ -382,6 +461,7 @@
       {
         className: `modal-overlay ${closing ? "closing" : ""}`,
         onClick: handleOverlay,
+        onTouchMove: (e) => e.preventDefault(),
         role: "dialog",
         "aria-modal": "true"
       },
@@ -605,7 +685,7 @@
     return /* @__PURE__ */ React.createElement("div", { className: "exercise-list" },
       /* @__PURE__ */ React.createElement("div", { className: "search-results-info" }, `\u627E\u5230 ${results.length} \u4E2A\u7ED3\u679C`),
       results.map((ex, i) => /* @__PURE__ */ React.createElement("div", {
-        key: ex.name + i,
+        key: `${ex.name || 'search'}-${i}`,
         className: "ex-card",
         onClick: () => onSelect(ex)
       },
@@ -657,24 +737,22 @@
   }
 
   function RecordModal({ onClose }) {
-    const [records, setRecords] = useState(() => {
-      try { return JSON.parse(localStorage.getItem("workout_records") || "[]"); } catch (e) { return []; }
-    });
+    const [records, setRecords] = useState(() => safeStorage.getJSON("workout_records", []));
     const [newRecord, setNewRecord] = useState({ name: "", weight: "", sets: "", reps: "", rpe: "" });
     const addRecord = () => {
       if (!newRecord.name) return;
       const rec = { ...newRecord, date: new Date().toLocaleString("zh-CN"), id: Date.now() };
       const updated = [rec, ...records].slice(0, 200);
       setRecords(updated);
-      localStorage.setItem("workout_records", JSON.stringify(updated));
+      safeStorage.setJSON("workout_records", updated);
       setNewRecord({ name: "", weight: "", sets: "", reps: "", rpe: "" });
     };
     const deleteRecord = (id) => {
       const updated = records.filter((r) => r.id !== id);
       setRecords(updated);
-      localStorage.setItem("workout_records", JSON.stringify(updated));
+      safeStorage.setJSON("workout_records", updated);
     };
-    return /* @__PURE__ */ React.createElement("div", { className: "modal-overlay", onClick: (e) => { if (e.target.classList.contains("modal-overlay")) onClose(); }, role: "dialog", "aria-modal": "true" },
+    return /* @__PURE__ */ React.createElement("div", { className: "modal-overlay", onClick: (e) => { if (e.target.classList.contains("modal-overlay")) onClose(); }, onTouchMove: (e) => e.preventDefault(), role: "dialog", "aria-modal": "true" },
       /* @__PURE__ */ React.createElement("div", { className: "modal" },
         /* @__PURE__ */ React.createElement("div", { className: "modal-head" },
           /* @__PURE__ */ React.createElement("button", { className: "modal-close", onClick: onClose, "aria-label": "\u5173\u95ED" }, /* @__PURE__ */ React.createElement(I.Close, { size: 13 })),
