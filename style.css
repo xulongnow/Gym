@@ -47,27 +47,6 @@ button:focus-visible, .tab-btn:focus-visible, .ds-option:focus-visible, .sub-btn
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
 }
-/* Focus-visible 统一焦点样式 */
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-  border-radius: inherit;
-}
-button:focus-visible, .tab-btn:focus-visible, .ds-option:focus-visible, .sub-btn:focus-visible, .ex-card:focus-visible, .modal-close:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-
-/* Focus-visible 统一焦点样式 */
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-  border-radius: inherit;
-}
-button:focus-visible, .tab-btn:focus-visible, .ds-option:focus-visible, .sub-btn:focus-visible, .ex-card:focus-visible, .modal-close:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
 
   .app { max-width: 1120px; margin: 0 auto; padding: 24px 20px 80px; }
 
@@ -205,6 +184,13 @@ button:focus-visible, .tab-btn:focus-visible, .ds-option:focus-visible, .sub-btn
 }
 .theme-toggle:hover { background: var(--line-2); }
 
+/* 弹窗开启时降级主题按钮，避免与弹窗重叠 */
+body.modal-open .theme-toggle {
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
 /* 快捷键提示 */
 .keyboard-hint {
   position: fixed; bottom: 24px; left: 24px;
@@ -306,7 +292,7 @@ button:focus-visible, .tab-btn:focus-visible, .ds-option:focus-visible, .sub-btn
   cursor: pointer;
   display: flex; align-items: center; justify-content: center;
   box-shadow: var(--shadow-md);
-  z-index: 100;
+  z-index: 80;
   font-size: 16px;
   transition: all 0.3s;
 }
@@ -555,7 +541,7 @@ button:focus-visible, .tab-btn:focus-visible, .ds-option:focus-visible, .sub-btn
     position: fixed; inset: 0;
     background: rgba(26,34,54,.55);
     backdrop-filter: blur(4px);
-    z-index: 100;
+    z-index: 110;
     display: flex; align-items: center; justify-content: center;
     padding: 12px;
     opacity: 0;
@@ -569,6 +555,7 @@ button:focus-visible, .tab-btn:focus-visible, .ds-option:focus-visible, .sub-btn
     background: var(--bg-card);
     border-radius: 18px;
     width: 100%;
+    z-index: 111;
     max-width: 580px;
     max-height: 94vh;
     overflow-y: auto;
@@ -1447,7 +1434,7 @@ d strong {
   box-shadow: var(--shadow-md);
   opacity: 0; transform: translateY(20px);
   transition: opacity 0.3s, transform 0.3s;
-  z-index: 100;
+  z-index: 80;
   font-size: 18px;
 }
 .back-to-top.visible { opacity: 1; transform: translateY(0); }
