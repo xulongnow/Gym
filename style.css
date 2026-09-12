@@ -378,6 +378,8 @@ body.modal-open .theme-toggle {
   /* Day tabs */
   .tabs {
     display: flex; gap: 4px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     background: var(--bg-elev);
     border: 1px solid var(--line);
     border-radius: var(--radius-lg);
@@ -391,6 +393,8 @@ body.modal-open .theme-toggle {
     font-family: inherit; color: var(--ink-3);
     transition: all .2s;
     display: flex; flex-direction: column; align-items: center; gap: 2px;
+    min-width: 56px;
+    flex-shrink: 0;
   }
   @media (hover: hover) and (pointer: fine) {
   .tab-btn:hover { background: var(--line-2); color: var(--ink); }
