@@ -227,11 +227,9 @@
     const openModal = useCallback((ex) => {
       setSelectedEx(ex);
       setModalClosing(false);
-      try { document.body.classList.add('modal-open'); } catch (e) {}
     }, []);
     const closeModal = useCallback(() => {
       setModalClosing(true);
-      try { document.body.classList.remove('modal-open'); } catch (e) {}
     }, []);
     useEffect(() => {
       let timer;
@@ -244,12 +242,12 @@
       return () => { if (timer) clearTimeout(timer); };
     }, [modalClosing]);
     useEffect(() => {
-      if (showRecords) {
+      if (selectedEx || showRecords) {
         try { document.body.classList.add('modal-open'); } catch (e) {}
       } else {
         try { document.body.classList.remove('modal-open'); } catch (e) {}
       }
-    }, [showRecords]);
+    }, [selectedEx, modalClosing, showRecords]);
     const selectedExRef = React.useRef(selectedEx);
     selectedExRef.current = selectedEx;
     const activeDayRef = React.useRef(activeDay);
