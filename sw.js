@@ -1,5 +1,5 @@
-// 五分化训练动作库 v2.6.0 Service Worker
-const CACHE_NAME = 'workout-lib-v2.6.0';
+// 五分化训练动作库 v2.6.1 Service Worker
+const CACHE_NAME = 'workout-lib-v2.6.1';
 const ASSETS = [
   './',
   './index.html',
