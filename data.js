@@ -2288,7 +2288,7 @@ window.PLAN_V6 = {
             "return": "回到起始位不卸力，立即接下一次；全程躯干稳定不后仰、不耸肩。教学要点：此动作主要练上半段，下放不需要完全到底，保持肱肌持续张力。"
           },
           "common_errors": "大臂前后晃动借力 → 大臂始终贴住身体两侧，仅肘关节屈伸\n躯干后仰甩起 → 核心收紧，身体保持稳定；选择可控重量\n手腕翻转（变成旋后弯举）→ 全程掌心相对，手腕严格中立\n耸肩 → 肩胛下沉，斜方不参与\n下放到底卸力 → 放至大臂垂直、肘微屈即停，保持张力",
-          "demo_gif": "anim-gifs/placeholder_elliptical.gif",
+          "demo_gif": "anim-gifs/cable_hammer.gif",
           "demo_gif_id": "cable_hammer",
           "demo_gif_match": "exact"
         },
@@ -2829,7 +2829,7 @@ window.PLAN_V6 = {
             "return": "回到外展位立即接下一次；全程躯干稳定不歪、骨盆不前后倾"
           },
           "common_errors": "躯干前后晃动借力 → 背部挺直，核心收紧，躯干不随腿摆动\n骨盆前倾或后倾 → 骨盆保持中立，腰不反弓\n起始外展幅度过大导致腹股沟拉伤 → 调整挡板至舒适起始位，循序渐进加大幅度\n利用惯性甩腿夹拢 → 推出 2 秒、放回 2-3 秒，全程控制\n只堆次数不收紧 → 每次顶峰主动夹紧 1 秒，质量优先于次数",
-          "demo_gif": "anim-gifs/placeholder_calf_raise.gif",
+          "demo_gif": "anim-gifs/hip_adduction.gif",
           "demo_gif_id": "hip_adduction",
           "demo_gif_match": "exact"
         },
@@ -3210,3 +3210,4 @@ window.PLAN_V6 = {
   },
   "__schema_version": "2.6.0"
 };
+
